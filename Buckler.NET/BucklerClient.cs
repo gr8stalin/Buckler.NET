@@ -75,6 +75,86 @@ namespace Buckler.NET
             return playerProfile;
         }
 
+        public async Task<IEnumerable<Replay>> GetReplaysAsync(long? playerUserCode, ReplayType replayType)
+        {
+            if (playerUserCode is null)
+            {
+                throw new ArgumentException("Player identification must be provided", nameof(playerUserCode));
+            }
+
+            List<Replay> replays = new();
+
+            var replayListUrl = $"{ApiUrlPath}/{authToken}/en/profile/{playerUserCode}/battlelog";
+
+            switch (replayType)
+            {
+                case ReplayType.Ranked:
+                    replayListUrl += "/rank.json";
+                    break;
+                case ReplayType.Casual:
+                    replayListUrl += "/casual.json";
+                    break;
+                case ReplayType.CustomRoom:
+                    replayListUrl += "/custom.json";
+                    break;
+                case ReplayType.BattleHub:
+                    replayListUrl += "/hub.json";
+                    break;
+                default:
+                    break;
+            }
+
+            var request = CreateRequest(replayListUrl);
+            var response = await client.SendAsync(request);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var responseString = await response.Content.ReadAsStringAsync();
+                var jsonData = JsonDocument.Parse(responseString).RootElement.GetProperty("pageProps");
+                /*
+                 * The replay list may be empty due to maintenance (i.e., after game updates that break
+                 * replay compatibility) but because the underlying JSON will always return a player's
+                 * profile data as part of the replay fetching process, the ReplayContainer object will
+                 * never be null
+                 */ 
+                var replayData = JsonSerializer.Deserialize<ReplayContainer>(jsonData)!;
+
+                if (replayData.ReplayList.Count == 0)
+                {
+                    return replays;
+                }
+
+                replays.AddRange(replayData.ReplayList);
+
+                if (replayData.TotalPages > 1)
+                {
+                    for (var i = 2; i <= replayData.TotalPages; i++)
+                    {
+                        var nextPageRequest = CreateRequest(replayListUrl + $"?page={i}");
+                        var nextPageResponse = await client.SendAsync(nextPageRequest);
+
+                        if (nextPageResponse.IsSuccessStatusCode)
+                        {
+                            var nextPageAsString = await response.Content.ReadAsStringAsync();
+                            var nextPageJson = JsonDocument.Parse(nextPageAsString).RootElement.GetProperty("pageProps");
+                            var nextPage = JsonSerializer.Deserialize<ReplayContainer>(nextPageJson)!;
+
+                            if (nextPage.ReplayList.Count > 0)
+                            {
+                                replays.AddRange(nextPage.ReplayList);
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+
+            return replays;
+        }
+
         private HttpRequestMessage CreateRequest(string searchUrl)
         {
             var request = new HttpRequestMessage(HttpMethod.Get, searchUrl);
