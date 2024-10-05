@@ -106,6 +106,13 @@ namespace Buckler.NET
             return container.PlayerList.SingleOrDefault();
         }
 
+        /// <summary>
+        /// Retrieves all of the available replays from the specified user's CFN
+        /// </summary>
+        /// <param name="playerUserCode"></param>
+        /// <param name="replayType"></param>
+        /// <returns>A collection of all available replays</returns>
+        /// <exception cref="ArgumentException"></exception>
         public async Task<IEnumerable<Replay>> GetReplaysAsync(long? playerUserCode, ReplayType replayType)
         {
             if (playerUserCode is null)
