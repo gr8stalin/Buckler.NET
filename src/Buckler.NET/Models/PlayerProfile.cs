@@ -7,7 +7,9 @@ namespace Buckler.NET.Models
         [JsonPropertyName("fighter_banner_list")]
         public IEnumerable<PlayerProfile> PlayerList { get; set; }
 
+#pragma warning disable CS8618
         public PlayerListContainer() { }
+#pragma warning restore CS8618
     }
 
     public class PlayerProfile
@@ -21,7 +23,10 @@ namespace Buckler.NET.Models
         [JsonPropertyName("home_name")]
         public string GeographicLocation { get; set; }
 
+#pragma warning disable CS8618
         public PlayerProfile() { }
+#pragma warning restore CS8618
+
     }
 
     public class PersonalInfo
@@ -35,6 +40,9 @@ namespace Buckler.NET.Models
         [JsonPropertyName("platform_name")]
         public string Platform { get; set; }
 
+#pragma warning disable CS8618
         public PersonalInfo() { }
+#pragma warning restore CS8618
+
     }
 }

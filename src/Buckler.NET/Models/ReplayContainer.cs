@@ -16,7 +16,9 @@ namespace Buckler.NET.Models
         [JsonPropertyName("sid")]
         public long PlayerId { get; set; }
 
+#pragma warning disable CS8618
         public ReplayContainer() { }
+#pragma warning restore CS8618
     }
 
     public class Replay
@@ -45,7 +47,9 @@ namespace Buckler.NET.Models
         [JsonPropertyName("replay_battle_sub_type_name")]
         public string ReplayBattleSubTypeName { get; set; }
 
+#pragma warning disable CS8618
         public Replay() { }
+#pragma warning restore CS8618
     }
 
     public class PlayerInfo
@@ -71,7 +75,9 @@ namespace Buckler.NET.Models
         [JsonPropertyName("round_results")]
         public int[] RoundResults { get; set; }
 
+#pragma warning disable CS8618
         public PlayerInfo() { }
+#pragma warning restore CS8618
     }
 
     public class CFN
@@ -85,6 +91,8 @@ namespace Buckler.NET.Models
         [JsonPropertyName("platform_name")]
         public string Platform { get; set; }
 
+#pragma warning disable CS8618
         public CFN() { }
+#pragma warning restore CS8618
     }
 }
