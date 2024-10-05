@@ -27,11 +27,19 @@ function UnitTests {
 
 function CopyOutput {
     $outputPath = "$projectPath\bin\$buildConfiguration\net8.0"
-    Copy-Item "$outputPath\*" -Destination "$buildDir" -Recurse
+    Copy-Item "$outputPath" -Destination "$buildDir\$buildConfiguration" -Recurse
 }
 
 function PrivateBuild {
     $buildConfiguration = "Debug"
+    Init
+    Compile
+    UnitTests
+    CopyOutput
+}
+
+function PublicBuild {
+    $buildConfiguration = "Release"
     Init
     Compile
     UnitTests
