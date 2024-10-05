@@ -4,7 +4,7 @@ namespace Buckler.NET
 {
     public interface IBucklerClient
     {
-        Task<PlayerProfile?> GetPlayerAsync(string playerName);
+        Task<IEnumerable<PlayerProfile>> GetPlayerAsync(string playerName);
 
         Task<PlayerProfile?> GetPlayerAsync(long? playerUserCode);
 

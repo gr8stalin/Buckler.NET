@@ -21,33 +21,62 @@ namespace Buckler.NET
             client = CreateHttpClient();
         }
 
-        public async Task<PlayerProfile?> GetPlayerAsync(string playerName)
+        /// <summary>
+        /// Given a player's name, returns a collection of profiles that contain that name.
+        /// </summary>
+        /// <param name="playerName">Must be greater than 4 characters as per Buckler CFN requirements</param>
+        /// <returns>
+        /// A collection of profiles that contain the name. If no players match the search term,
+        /// the collection will be empty.
+        /// </returns>
+        /// /// <exception cref="ArgumentException"></exception>
+        public async Task<IEnumerable<PlayerProfile>> GetPlayerAsync(string playerName)
         {
             if (string.IsNullOrWhiteSpace(playerName)) 
             { 
                 throw new ArgumentException("A search term must be provided", nameof(playerName));
             }
 
-            PlayerProfile? playerProfile = null;
-
-            var searchByPlayerNameUrl = $"{ApiUrlPath}/{authToken}/en/fighterslist/search/result.json?fighter_id={playerName}";
-
-            var request = CreateRequest(searchByPlayerNameUrl);
-
-            var response = await client.SendAsync(request);
-
-            if (response.IsSuccessStatusCode)
+            if (playerName.Length < 4)
             {
-                var responseString = await response.Content.ReadAsStringAsync();
-                var jsonData = JsonDocument.Parse(responseString).RootElement.GetProperty("pageProps");
-                var profiles = JsonSerializer.Deserialize<List<PlayerProfile>>(jsonData);
-
-                playerProfile = profiles?.SingleOrDefault();
+                throw new ArgumentException("The search term must be greater than or equal to 4 characters in length", nameof(playerName));
             }
 
-            return playerProfile;
+            var searchByPlayerNameUrl = $"{ApiUrlPath}/{authToken}/en/fighterslist/search/result.json?fighter_id={playerName}";
+            var request = CreateRequest(searchByPlayerNameUrl);
+            var response = await client.SendAsync(request);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                return [];
+            }
+
+            var responseString = await response.Content.ReadAsStringAsync();
+            var jsonData = JsonDocument.Parse(responseString).RootElement.GetProperty("pageProps");
+            /*
+             * The profile list may be empty (i.e., the user doesn't exist), but there's still
+             * a parent JSON object wrapping it which contains metadata such as the search terms
+             * that were used. This deserialization will always result in an object and will not
+             * return null.
+             */ 
+            var container = JsonSerializer.Deserialize<PlayerListContainer>(jsonData)!;
+
+            if (container.PlayerList.Any())
+            {
+                return container.PlayerList.ToList();
+            }
+
+            return [];
         }
 
+        /// <summary>
+        /// Given a player's user code, returns their CFN profile.
+        /// </summary>
+        /// <param name="playerUserCode">
+        /// This must be the exact user code as this search endpoint does not perform approximate searches
+        /// </param>
+        /// <returns>A <see cref="PlayerProfile"/> object representing their relevant CFN information.</returns>
+        /// <exception cref="ArgumentException"></exception>
         public async Task<PlayerProfile?> GetPlayerAsync(long? playerUserCode)
         {
             if (playerUserCode is null)
@@ -55,24 +84,26 @@ namespace Buckler.NET
                 throw new ArgumentException("A search term must be provided", nameof(playerUserCode));
             }
 
-            PlayerProfile? playerProfile = null;
-
             var searchByPlayerUserCodeUrl = $"{ApiUrlPath}/{authToken}/en/fighterslist/search/result.json?short_id={playerUserCode}";
-
             var request = CreateRequest(searchByPlayerUserCodeUrl);
-
             var response = await client.SendAsync(request);
 
-            if (response.IsSuccessStatusCode)
+            if (!response.IsSuccessStatusCode)
             {
-                var responseString = await response.Content.ReadAsStringAsync();
-                var jsonData = JsonDocument.Parse(responseString).RootElement.GetProperty("pageProps");
-                var profiles = JsonSerializer.Deserialize<List<PlayerProfile>>(jsonData);
-
-                playerProfile = profiles?.SingleOrDefault();
+                return null;
             }
 
-            return playerProfile;
+            var responseString = await response.Content.ReadAsStringAsync();
+            var jsonData = JsonDocument.Parse(responseString).RootElement.GetProperty("pageProps");
+            /*
+             * The profile list may be empty (i.e., the user doesn't exist), but there's still
+             * a parent JSON object wrapping it which contains metadata such as the search terms
+             * that were used. This deserialization will always result in an object and will not
+             * return null.
+             */
+            var container = JsonSerializer.Deserialize<PlayerListContainer>(jsonData)!;
+            
+            return container.PlayerList.SingleOrDefault();
         }
 
         public async Task<IEnumerable<Replay>> GetReplaysAsync(long? playerUserCode, ReplayType replayType)
@@ -119,7 +150,7 @@ namespace Buckler.NET
                  */ 
                 var replayData = JsonSerializer.Deserialize<ReplayContainer>(jsonData)!;
 
-                if (replayData.ReplayList.Count == 0)
+                if (!replayData.ReplayList.Any())
                 {
                     return replays;
                 }
@@ -139,7 +170,7 @@ namespace Buckler.NET
                             var nextPageJson = JsonDocument.Parse(nextPageAsString).RootElement.GetProperty("pageProps");
                             var nextPage = JsonSerializer.Deserialize<ReplayContainer>(nextPageJson)!;
 
-                            if (nextPage.ReplayList.Count > 0)
+                            if (nextPage.ReplayList.Any())
                             {
                                 replays.AddRange(nextPage.ReplayList);
                             }

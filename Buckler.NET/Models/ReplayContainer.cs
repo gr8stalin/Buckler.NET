@@ -11,7 +11,7 @@ namespace Buckler.NET.Models
         public int TotalPages { get; set; }
 
         [JsonPropertyName("replay_list")]
-        public List<Replay> ReplayList { get; set; }
+        public IEnumerable<Replay> ReplayList { get; set; }
 
         [JsonPropertyName("sid")]
         public long PlayerId { get; set; }

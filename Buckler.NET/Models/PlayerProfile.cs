@@ -2,6 +2,14 @@
 
 namespace Buckler.NET.Models
 {
+    public class PlayerListContainer
+    {
+        [JsonPropertyName("fighter_banner_list")]
+        public IEnumerable<PlayerProfile> PlayerList { get; set; }
+
+        public PlayerListContainer() { }
+    }
+
     public class PlayerProfile
     {
         [JsonPropertyName("personal_info")]
