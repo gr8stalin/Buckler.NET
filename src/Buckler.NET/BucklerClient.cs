@@ -3,23 +3,12 @@ using System.Text.Json;
 
 namespace Buckler.NET
 {
-    public class BucklerClient : IBucklerClient
+    public class BucklerClient(string bucklerId, string bucklerRId, string authToken) : IBucklerClient
     {
-        private const string ApiUrlPath = "https://www.streetfighter.com/6/buckler/_next/data";
-
-        private readonly string bucklerId;
-        private readonly string bucklerRId;
-        private readonly string authToken;
-        private HttpClient client;
-
-        public BucklerClient(string bucklerId, string bucklerRId, string authToken)
-        {
-            this.bucklerId = bucklerId;
-            this.bucklerRId = bucklerRId;
-            this.authToken = authToken;
-
-            client = CreateHttpClient();
-        }
+        private readonly string bucklerId = bucklerId;
+        private readonly string bucklerRId = bucklerRId;
+        private HttpClient client = CreateHttpClient();
+        private UrlPathGenerator urlPathGenerator = new(authToken);
 
         /// <summary>
         /// Given a player's name, returns a collection of profiles that contain that name.
@@ -42,8 +31,8 @@ namespace Buckler.NET
                 throw new ArgumentException("The search term must be greater than or equal to 4 characters in length", nameof(playerName));
             }
 
-            var searchByPlayerNameUrl = $"{ApiUrlPath}/{authToken}/en/fighterslist/search/result.json?fighter_id={playerName}";
-            var request = CreateRequest(searchByPlayerNameUrl);
+            var playerSearchUrl = urlPathGenerator.ProfileSearchUrl(playerName);
+            var request = CreateRequest(playerSearchUrl);
             var response = await client.SendAsync(request);
 
             if (!response.IsSuccessStatusCode)
@@ -84,8 +73,8 @@ namespace Buckler.NET
                 throw new ArgumentException("A search term must be provided", nameof(playerUserCode));
             }
 
-            var searchByPlayerUserCodeUrl = $"{ApiUrlPath}/{authToken}/en/fighterslist/search/result.json?short_id={playerUserCode}";
-            var request = CreateRequest(searchByPlayerUserCodeUrl);
+            var playerUserCodeSearchUrl = urlPathGenerator.ProfileSearchUrl(playerUserCode);
+            var request = CreateRequest(playerUserCodeSearchUrl);
             var response = await client.SendAsync(request);
 
             if (!response.IsSuccessStatusCode)
@@ -120,28 +109,9 @@ namespace Buckler.NET
                 throw new ArgumentException("Player identification must be provided", nameof(playerUserCode));
             }
 
-            List<Replay> replays = new();
+            List<Replay> replays = [];
 
-            var replayListUrl = $"{ApiUrlPath}/{authToken}/en/profile/{playerUserCode}/battlelog";
-
-            switch (replayType)
-            {
-                case ReplayType.Ranked:
-                    replayListUrl += "/rank.json";
-                    break;
-                case ReplayType.Casual:
-                    replayListUrl += "/casual.json";
-                    break;
-                case ReplayType.CustomRoom:
-                    replayListUrl += "/custom.json";
-                    break;
-                case ReplayType.BattleHub:
-                    replayListUrl += "/hub.json";
-                    break;
-                default:
-                    break;
-            }
-
+            var replayListUrl = urlPathGenerator.ReplayListUrl(playerUserCode, replayType);
             var request = CreateRequest(replayListUrl);
             var response = await client.SendAsync(request);
 
