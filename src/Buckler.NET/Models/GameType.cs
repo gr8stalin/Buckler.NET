@@ -1,6 +1,6 @@
 ﻿namespace Buckler.NET.Models
 {
-    public enum ReplayType
+    public enum GameType
     {
         Ranked = 0,
         Casual,

@@ -95,14 +95,43 @@ namespace Buckler.NET
             return container.PlayerList.SingleOrDefault();
         }
 
+
+        public async Task<Replay?> GetMostRecentReplayAsync(long? playerUserCode, GameType gameType)
+        {
+            if (playerUserCode is null)
+            {
+                throw new ArgumentException("Player identification must be provided", nameof(playerUserCode));
+            }
+
+            var replayListUrl = urlPathGenerator.ReplayListUrl(playerUserCode, gameType);
+            var request = CreateRequest(replayListUrl);
+            var response = await client.SendAsync(request);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                return null;
+            }
+
+            var responseString = await response.Content.ReadAsStringAsync();
+            var jsonData = JsonDocument.Parse(responseString).RootElement.GetProperty("pageProps");
+            var replayData = JsonSerializer.Deserialize<ReplayContainer>(jsonData)!;
+
+            if (!replayData.ReplayList.Any())
+            {
+                return null;
+            }
+
+            return replayData.ReplayList.FirstOrDefault();
+        }
+
         /// <summary>
         /// Retrieves all of the available replays from the specified user's CFN
         /// </summary>
         /// <param name="playerUserCode"></param>
-        /// <param name="replayType"></param>
+        /// <param name="gameType"></param>
         /// <returns>A collection of all available replays</returns>
         /// <exception cref="ArgumentException"></exception>
-        public async Task<IEnumerable<Replay>> GetReplaysAsync(long? playerUserCode, ReplayType replayType)
+        public async Task<IEnumerable<Replay>> GetAllReplaysForGametypeAsync(long? playerUserCode, GameType gameType)
         {
             if (playerUserCode is null)
             {
@@ -111,7 +140,7 @@ namespace Buckler.NET
 
             List<Replay> replays = [];
 
-            var replayListUrl = urlPathGenerator.ReplayListUrl(playerUserCode, replayType);
+            var replayListUrl = urlPathGenerator.ReplayListUrl(playerUserCode, gameType);
             var request = CreateRequest(replayListUrl);
             var response = await client.SendAsync(request);
 

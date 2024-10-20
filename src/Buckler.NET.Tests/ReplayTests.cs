@@ -26,10 +26,10 @@ namespace Buckler.NET.Tests
         {
             // Arrange
             var subject = Substitute.For<IBucklerClient>();
-            subject.GetReplaysAsync(44445555, ReplayType.CustomRoom).Returns(Task.FromResult(mockReplayList));
+            subject.GetAllReplaysForGametypeAsync(44445555, GameType.CustomRoom).Returns(Task.FromResult(mockReplayList));
 
             // Act
-            var result = await subject.GetReplaysAsync(44445555, ReplayType.CustomRoom);
+            var result = await subject.GetAllReplaysForGametypeAsync(44445555, GameType.CustomRoom);
 
             // Assert
             result.ShouldNotBeEmpty();

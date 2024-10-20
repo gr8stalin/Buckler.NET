@@ -19,22 +19,22 @@ namespace Buckler.NET
             return $"{ApiUrlPath}/{authToken}/en/fighterslist/search/result.json?short_id={playerUserCode}";
         }
 
-        public string ReplayListUrl(long? playerUserCode, ReplayType replayType)
+        public string ReplayListUrl(long? playerUserCode, GameType replayType)
         {
             var replayListUrl = $"{ApiUrlPath}/{authToken}/en/profile/{playerUserCode}/battlelog";
 
             switch (replayType)
             {
-                case ReplayType.Ranked:
+                case GameType.Ranked:
                     replayListUrl += "/rank.json";
                     break;
-                case ReplayType.Casual:
+                case GameType.Casual:
                     replayListUrl += "/casual.json";
                     break;
-                case ReplayType.CustomRoom:
+                case GameType.CustomRoom:
                     replayListUrl += "/custom.json";
                     break;
-                case ReplayType.BattleHub:
+                case GameType.BattleHub:
                     replayListUrl += "/hub.json";
                     break;
                 default:
