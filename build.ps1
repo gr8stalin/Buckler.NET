@@ -18,14 +18,17 @@ function Init {
 }
 
 function Compile {
+    Write-Output "Compiling"
     & dotnet build "$sourceDir\$projectName.sln" -nologo --no-restore -v $dotnetCliVerbosity --no-incremental -c $buildConfiguration
 }
 
 function UnitTests {
+    Write-Output "Running Unit Tests"
     & dotnet test "$unitTestPath\$projectName.Tests.csproj" -nologo -v $dotnetCliVerbosity --no-build --no-restore -c $buildConfiguration
 }
 
 function CopyOutput {
+    Write-Output "Copying validated build to output"
     $outputPath = "$projectPath\bin\$buildConfiguration\net8.0"
     Copy-Item "$outputPath" -Destination "$buildDir\$buildConfiguration" -Recurse
 }

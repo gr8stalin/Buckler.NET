@@ -120,6 +120,9 @@ namespace Buckler.NET
                 throw new ArgumentException("Player identification must be provided", nameof(playerUserCode));
             }
 
+            // Buckler's pagination starts at 1 instead of 0
+            int pageOffset = 2;
+            bool replaysPresent = true;
             List<Replay> replays = [];
 
             var replayListUrl = urlPathGenerator.ReplayListUrl(playerUserCode, gameType);
@@ -138,22 +141,24 @@ namespace Buckler.NET
                 return replays;
             }
 
+            int totalPages = replayData.TotalPages;
             replays.AddRange(replayData.ReplayList);
 
-            if (replayData.TotalPages > 1)
+            if (totalPages > 1)
             {
-                for (var i = 2; i <= replayData.TotalPages; i++)
+                while (totalPages >= pageOffset && replaysPresent)
                 {
-                    var nextPageResponse = await GetBucklerDataAsync(replayListUrl + $"?page={i}");
-                    var nextPage = JsonSerializer.Deserialize<ReplayContainer>(nextPageResponse)!;
-
+                    var nextResponse = await GetBucklerDataAsync(replayListUrl + $"?page={pageOffset}");
+                    var nextPage = JsonSerializer.Deserialize<ReplayContainer>(nextResponse)!;
+                    
                     if (nextPage.ReplayList.Any())
                     {
                         replays.AddRange(nextPage.ReplayList);
+                        pageOffset++;
                     }
                     else
                     {
-                        break;
+                        replaysPresent = false;
                     }
                 }
             }
