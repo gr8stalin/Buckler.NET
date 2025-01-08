@@ -43,5 +43,10 @@ namespace Buckler.NET
 
             return replayListUrl;
         }
+
+        public string PlayerStatsUrl(long? playerUserCode)
+        {
+            return $"{ApiUrlPath}/{authToken}/en/profile/{playerUserCode}/play.json";
+        }
     }
 }
