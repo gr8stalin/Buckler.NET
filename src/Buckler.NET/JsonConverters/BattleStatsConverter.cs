@@ -1,4 +1,5 @@
 ﻿using Buckler.NET.Models;
+using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -15,19 +16,25 @@ namespace Buckler.NET.JsonConverters
             battleStats.SuperGaugeUsage = new SuperGaugeUsage();
             battleStats.DriveGaugeUsage = new DriveGaugeUsage();
 
+            var superGaugeJsonPropNames = typeof(SuperGaugeUsage).GetProperties().Select(prop => new { PropertyName = prop.Name, JsonAttributeName = prop.GetCustomAttribute<JsonPropertyNameAttribute>()?.Name });
+            var driveGaugeJsonPropNames = typeof(DriveGaugeUsage).GetProperties().Select(prop => new { PropertyName = prop.Name, JsonAttributeName = prop.GetCustomAttribute<JsonPropertyNameAttribute>()?.Name });
+
             foreach (var property in root.EnumerateObject())
             {
-                if (property.Name.Contains("gauge_rate"))
+                if (property.Name.Contains("gauge_rate") && !property.Name.Contains("drive_other"))
                 {
-                    var jsonProp = typeof(Battle).GetProperty(property.Name, System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.IgnoreCase);
 
                     if (property.Name.Contains("_sa_lv") || property.Name == "gauge_rate_ca")
                     {
-                        jsonProp?.SetValue(battleStats.SuperGaugeUsage, property.Value);
+                        var dtoPropName = superGaugeJsonPropNames.Where(x => x.JsonAttributeName == property.Name).Select(y => y.PropertyName).FirstOrDefault();
+                        var jsonProp = typeof(SuperGaugeUsage).GetProperty(dtoPropName);
+                        jsonProp?.SetValue(battleStats.SuperGaugeUsage, property.Value.GetDouble());
                     }
                     else
                     {
-                        jsonProp?.SetValue(battleStats.DriveGaugeUsage, property.Value);
+                        var dtoPropName = driveGaugeJsonPropNames.Where(x => x.JsonAttributeName == property.Name).Select(y => y.PropertyName).FirstOrDefault();
+                        var jsonProp = typeof(DriveGaugeUsage).GetProperty(dtoPropName);
+                        jsonProp?.SetValue(battleStats.DriveGaugeUsage, property.Value.GetDouble());
                     }
                 }
             }

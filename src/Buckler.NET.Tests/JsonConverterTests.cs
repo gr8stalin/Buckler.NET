@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
+using Buckler.NET.Models;
 
 namespace Buckler.NET.Tests
 {
@@ -14,7 +16,9 @@ namespace Buckler.NET.Tests
         [Test]
         public void CanConvert() 
         {
-            var testJson = "";
+            var testData = File.ReadAllText(@"TestData\ConverterData\profile.json");
+            var parsedData = JsonDocument.Parse(testData).RootElement.GetProperty("pageProps");
+            var jsonObj = JsonSerializer.Deserialize<FighterBanner>(parsedData);
         }
     }
 }

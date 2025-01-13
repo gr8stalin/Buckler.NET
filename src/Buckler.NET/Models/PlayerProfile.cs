@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using Buckler.NET.JsonConverters;
+using System.Text.Json.Serialization;
 
 namespace Buckler.NET.Models
 {
@@ -26,6 +27,15 @@ namespace Buckler.NET.Models
 
     }
 
+    public class FighterBanner
+    {
+        [JsonPropertyName("fighter_banner_info")]
+        public PlayerProfile Info { get; set; }
+
+        [JsonPropertyName("play")]
+        public PlayerStats Stats { get; set; }
+    }
+
     public class PersonalInfo
     {
         [JsonPropertyName("fighter_id")]
@@ -45,6 +55,10 @@ namespace Buckler.NET.Models
     {
         [JsonPropertyName("base_info")]
         public PlaytimeAndLikes PlaytimeAndLikes { get; set; }
+
+        [JsonPropertyName("battle_stats")]
+        [JsonConverter(typeof(BattleStatsConverter))]
+        public Battle Battle { get; set; }
     }
 
     public class PlaytimeAndLikes
@@ -175,12 +189,22 @@ namespace Buckler.NET.Models
         [JsonPropertyName("just_parry")]
         public double PerfectParryUsage { get; set; }
 
+        [JsonPropertyName("throw_count")]
         public double SuccessfulThrows { get; set; }
 
+        [JsonPropertyName("throw_tech")]
         public double SuccessfulThrowTechs { get; set; }
+
+        [JsonPropertyName("received_throw_count")]
         public double TimesThrown { get; set; }
+
+        [JsonPropertyName("received_throw_drive_parry")]
         public double TimesThrownWhileInDriveParryState { get; set; }
+
+        [JsonPropertyName("throw_drive_parry")]
         public double SuccessfulThrowsWhileOpponentInDriveParryState { get; set; }
+
+        [JsonPropertyName("gauge_rate_drive_other")]
         public double PercentageOfDamageFromNormals { get; set; }
     }
 
@@ -206,14 +230,21 @@ namespace Buckler.NET.Models
 
     public class DriveGaugeUsage
     {
+        [JsonPropertyName("gauge_rate_drive_guard")]
+        public double DriveParry { get; set; }
+
         [JsonPropertyName("gauge_rate_drive_impact")]
         public double DriveImpact { get; set; }
+
         [JsonPropertyName("gauge_rate_drive_reversal")]
         public double DriveReversal { get; set; }
+
         [JsonPropertyName("gauge_rate_drive_rush_from_parry")]
         public double DriveRushFromParry { get; set; }
+
         [JsonPropertyName("gauge_rate_drive_rush_from_cancel")]
         public double DriveRushFromCancel { get; set; }
+
         [JsonPropertyName("gauge_rate_drive_arts")]
         public double OverdriveArts { get; set; }
     }
