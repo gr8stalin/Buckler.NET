@@ -103,5 +103,131 @@ namespace Buckler.NET.Models
 
         public GameMode() { }
     }
+
+
+    /// <summary>
+    /// All statistics concerning combat (i.e. Drive Impact usage,
+    /// Super Art usage, Perfect Parry usage, etc.) are reported as
+    /// an average over the past 100 games regardless of game mode.
+    /// </summary>
+    public class Battle
+    {
+        [JsonPropertyName("battle_hub_match_play_count")]
+        public int TotalMatchesInBattleHub { get; set; }
+
+        [JsonPropertyName("casual_match_play_count")]
+        public int TotalMatchesInCasualMatchmaking { get; set; }
+
+        [JsonPropertyName("rank_match_play_count")]
+        public int TotalMatchesInRankedMatchmaking { get; set; }
+
+        [JsonPropertyName("custom_room_match_play_count")]
+        public int TotalMatchesInCustomRoom { get; set; }
+
+        public DriveGaugeUsage DriveGaugeUsage { get; set; }
+
+        public SuperGaugeUsage SuperGaugeUsage { get; set; }
+
+        /// <summary>
+        /// Average time spent keeping the opponent in the corner
+        /// </summary>
+        [JsonPropertyName("corner_time")]
+        public double TimeSpentCorneringOpponent { get; set; }
+
+        /// <summary>
+        /// Average time the player spent defending themselves
+        /// in the corner
+        /// </summary>
+        [JsonPropertyName("cornered_time")]
+        public double TimeSpentCornered { get; set; }
+
+        /// <summary>
+        /// Average number of times the player used drive impact
+        /// </summary>
+        [JsonPropertyName("drive_impact")]
+        public double DriveImpactUsage { get; set; }
+
+        /// <summary>
+        /// Average number of times the player used drive
+        /// impact to counter their opponent's drive impact
+        /// </summary>
+        [JsonPropertyName("drive_impact_to_drive_impact")]
+        public double DriveImpactCounterUsage { get; set; }
+
+        /// <summary>
+        /// Average number of times the player used drive
+        /// parry to defend themselves
+        /// </summary>
+        [JsonPropertyName("drive_parry")]
+        public double DriveParryUsage { get; set; }
+
+        /// <summary>
+        /// Average number of times the player used drive
+        /// reversal to defend themselves
+        /// </summary>
+        [JsonPropertyName("drive_reversal")]
+        public double DriveReversalUsage { get; set; }
+
+        /// <summary>
+        /// Average number of times the player used perfect
+        /// parry to defend themselves
+        /// </summary>
+        [JsonPropertyName("just_parry")]
+        public double PerfectParryUsage { get; set; }
+
+        public double SuccessfulThrows { get; set; }
+
+        public double SuccessfulThrowTechs { get; set; }
+        public double TimesThrown { get; set; }
+        public double TimesThrownWhileInDriveParryState { get; set; }
+        public double SuccessfulThrowsWhileOpponentInDriveParryState { get; set; }
+        public double PercentageOfDamageFromNormals { get; set; }
+    }
+
+    public class CharacterLeagueInfo
+    {
+
+    }
+
+    public class CharacterPlayPointInfo
+    {
+
+    }
+
+    public class CharacterWinRate
+    {
+
+    }
+
+    public class CharacterWinRateByMatchup
+    {
+
+    }
+
+    public class DriveGaugeUsage
+    {
+        [JsonPropertyName("gauge_rate_drive_impact")]
+        public double DriveImpact { get; set; }
+        [JsonPropertyName("gauge_rate_drive_reversal")]
+        public double DriveReversal { get; set; }
+        [JsonPropertyName("gauge_rate_drive_rush_from_parry")]
+        public double DriveRushFromParry { get; set; }
+        [JsonPropertyName("gauge_rate_drive_rush_from_cancel")]
+        public double DriveRushFromCancel { get; set; }
+        [JsonPropertyName("gauge_rate_drive_arts")]
+        public double OverdriveArts { get; set; }
+    }
+
+    public class SuperGaugeUsage
+    {
+        [JsonPropertyName("gauge_rate_sa_lv1")]
+        public double Level1 { get; set; }
+        [JsonPropertyName("gauge_rate_sa_lv2")]
+        public double Level2 { get; set; }
+        [JsonPropertyName("gauge_rate_sa_lv3")]
+        public double Level3 { get; set; }
+        [JsonPropertyName("gauge_rate_ca")]
+        public double CriticalArt { get; set; }
+    }
 }
 #pragma warning restore CS8618
