@@ -1,24 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
+﻿using System.Text.Json;
 using Buckler.NET.Models;
+using Shouldly;
 
 namespace Buckler.NET.Tests
 {
     public class JsonConverterTests
     {
+        private string testData;
+
         [SetUp]
-        public void SetUp() { }
+        public void SetUp() 
+        { 
+            testData = File.ReadAllText(@"TestData\ConverterData\profile.json");
+        }
 
         [Test]
         public void CanConvert() 
         {
-            var testData = File.ReadAllText(@"TestData\ConverterData\profile.json");
+            // Arrange
             var parsedData = JsonDocument.Parse(testData).RootElement.GetProperty("pageProps");
+
+            // Act
             var jsonObj = JsonSerializer.Deserialize<FighterBanner>(parsedData);
+
+            // Assert
+            jsonObj.ShouldNotBeNull();
+            jsonObj.Info.ShouldNotBeNull();
+            jsonObj.Stats.ShouldNotBeNull();
         }
     }
 }

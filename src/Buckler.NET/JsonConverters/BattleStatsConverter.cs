@@ -9,30 +9,27 @@ namespace Buckler.NET.JsonConverters
     {
         public override Battle? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            using JsonDocument document = JsonDocument.ParseValue(ref reader);
+            using var document = JsonDocument.ParseValue(ref reader);
 
-            var root = document.RootElement;
-            var battleStats = JsonSerializer.Deserialize<Battle>(root.GetRawText(), options);
-            battleStats.SuperGaugeUsage = new SuperGaugeUsage();
-            battleStats.DriveGaugeUsage = new DriveGaugeUsage();
+            var rootElement = document.RootElement;
+            var battleStats = BuildBattleStatsContainer(rootElement, options);
 
-            var superGaugeJsonPropNames = typeof(SuperGaugeUsage).GetProperties().Select(prop => new { PropertyName = prop.Name, JsonAttributeName = prop.GetCustomAttribute<JsonPropertyNameAttribute>()?.Name });
-            var driveGaugeJsonPropNames = typeof(DriveGaugeUsage).GetProperties().Select(prop => new { PropertyName = prop.Name, JsonAttributeName = prop.GetCustomAttribute<JsonPropertyNameAttribute>()?.Name });
-
-            foreach (var property in root.EnumerateObject())
+            foreach (var property in document.RootElement.EnumerateObject())
             {
                 if (property.Name.Contains("gauge_rate") && !property.Name.Contains("drive_other"))
                 {
+                    var superGaugeNameMap = BuildDataObjectNameMap(typeof(SuperGaugeUsage));
+                    var driveGaugeNameMap = BuildDataObjectNameMap(typeof(DriveGaugeUsage));
 
                     if (property.Name.Contains("_sa_lv") || property.Name == "gauge_rate_ca")
                     {
-                        var dtoPropName = superGaugeJsonPropNames.Where(x => x.JsonAttributeName == property.Name).Select(y => y.PropertyName).FirstOrDefault();
+                        var dtoPropName = superGaugeNameMap.Where(x => x.JsonAttributeName == property.Name).Select(y => y.PropertyName).FirstOrDefault();
                         var jsonProp = typeof(SuperGaugeUsage).GetProperty(dtoPropName);
                         jsonProp?.SetValue(battleStats.SuperGaugeUsage, property.Value.GetDouble());
                     }
                     else
                     {
-                        var dtoPropName = driveGaugeJsonPropNames.Where(x => x.JsonAttributeName == property.Name).Select(y => y.PropertyName).FirstOrDefault();
+                        var dtoPropName = driveGaugeNameMap.Where(x => x.JsonAttributeName == property.Name).Select(y => y.PropertyName).FirstOrDefault();
                         var jsonProp = typeof(DriveGaugeUsage).GetProperty(dtoPropName);
                         jsonProp?.SetValue(battleStats.DriveGaugeUsage, property.Value.GetDouble());
                     }
@@ -42,9 +39,26 @@ namespace Buckler.NET.JsonConverters
             return battleStats;
         }
 
+
         public override void Write(Utf8JsonWriter writer, Battle value, JsonSerializerOptions options)
         {
             throw new NotImplementedException();
+        }
+        
+        private record JsonToPropertyNameMap(string? PropertyName, string? JsonAttributeName);
+
+        private static Battle BuildBattleStatsContainer(JsonElement root, JsonSerializerOptions options)
+        {
+            var dto = JsonSerializer.Deserialize<Battle>(root.GetRawText(), options);
+            dto.SuperGaugeUsage = new SuperGaugeUsage();
+            dto.DriveGaugeUsage = new DriveGaugeUsage();
+
+            return dto;
+        }
+
+        private static IEnumerable<JsonToPropertyNameMap> BuildDataObjectNameMap(Type dtoType)
+        {
+            return dtoType.GetProperties().Select(prop => new JsonToPropertyNameMap(prop.Name, prop.GetCustomAttribute<JsonPropertyNameAttribute>()?.Name));
         }
     }
 }
