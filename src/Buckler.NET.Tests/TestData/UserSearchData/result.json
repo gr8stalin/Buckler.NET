@@ -1,0 +1,1612 @@
+{
+  "pageProps": {
+    "fighter_banner_list": [
+      {
+        "allow_cross_play": true,
+        "battle_input_type": 0,
+        "custom_room_invite_setting": 1,
+        "enjoy_total_point": 1291,
+        "favorite_character_id": 21,
+        "favorite_character_league_info": {
+          "league_point": 412603,
+          "league_rank": 36,
+          "master_league": 42,
+          "master_rating": 1872,
+          "master_rating_ranking": 715
+        },
+        "favorite_character_play_point": {
+          "battle_hub": 1941,
+          "fighting_ground": 308311,
+          "world_tour": 1422
+        },
+        "friend_request_flag": false,
+        "friendship": 3,
+        "home_id": 999,
+        "inside_rank": 2,
+        "is_circle_invite": true,
+        "is_circle_member": false,
+        "last_play_at": 1739920958,
+        "main_circle": {
+          "circle_id": "",
+          "circle_name": "",
+          "data_exist": false,
+          "emblem": {
+            "emblem_base": 0,
+            "emblem_base_color": 0,
+            "emblem_frame": 0,
+            "emblem_frame_color": 0,
+            "emblem_pattern": 0,
+            "emblem_pattern_color": 0,
+            "emblem_pattern_horizontal_inversion": false,
+            "emblem_pattern_vertical_inversion": false,
+            "emblem_processing": 0,
+            "emblem_symbol1": 0,
+            "emblem_symbol1_clipping": false,
+            "emblem_symbol1_color": 0,
+            "emblem_symbol1_horizontal_inversion": false,
+            "emblem_symbol1_vertical_inversion": false,
+            "emblem_symbol2": 0,
+            "emblem_symbol2_clipping": false,
+            "emblem_symbol2_color": 0,
+            "emblem_symbol2_horizontal_inversion": false,
+            "emblem_symbol2_vertical_inversion": false
+          },
+          "leader": {
+            "fighter_id": "",
+            "platform_id": 0,
+            "short_id": 0
+          }
+        },
+        "max_content_play_time": {
+          "content_type": 4,
+          "play_time": 4052694
+        },
+        "mobile_linkage": false,
+        "online_status_info": {
+          "battlehub_admission_restriction": 0,
+          "battlehub_id": "",
+          "battlehub_platform_id": 0,
+          "battlehub_region_id": 0,
+          "battlehub_server_no": 0,
+          "custom_room_master_short_id": 0,
+          "custom_room_platform_id": 0,
+          "custom_room_publish_setting": 1,
+          "custom_room_region_id": 0,
+          "custom_room_required_network_connection_quality": 0,
+          "custom_room_required_pass_code": false,
+          "custom_room_room_id": "",
+          "online_status": 2,
+          "online_status_data": {
+            "online_status_name": "Menu",
+            "online_status_type": 1
+          },
+          "battlehub_region_name": "",
+          "battlehub_formated_server_no": "9000"
+        },
+        "personal_info": {
+          "fighter_id": "Canvas",
+          "platform_id": 5,
+          "short_id": 3275602923,
+          "platform_name": "Steam",
+          "platform_tool_name": "steam"
+        },
+        "play_time_zone": {
+          "end_hour": 8,
+          "end_minute": 0,
+          "start_hour": 5,
+          "start_minute": 30
+        },
+        "profile_comment": {
+          "profile_tag_id": 11,
+          "tag_option_id": 0
+        },
+        "title_plate": 10001,
+        "favorite_character_name": "Jamie",
+        "favorite_character_tool_name": "jamie",
+        "title_data": {
+          "title_data_id": 10001,
+          "title_data_grade_id": 1,
+          "title_data_grade_name": "銅",
+          "title_data_plate_id": 122,
+          "title_data_plate_name": "122-8bb65d811510d0e60b605476864239",
+          "title_data_val": "Let's Do This"
+        },
+        "home_name": "Other"
+      },
+      {
+        "allow_cross_play": true,
+        "battle_input_type": 1,
+        "custom_room_invite_setting": 1,
+        "enjoy_total_point": 24,
+        "favorite_character_id": 9,
+        "favorite_character_league_info": {
+          "league_point": -1,
+          "league_rank": 39,
+          "master_league": 0,
+          "master_rating": 0,
+          "master_rating_ranking": 0
+        },
+        "favorite_character_play_point": {
+          "battle_hub": 660,
+          "fighting_ground": 0,
+          "world_tour": 0
+        },
+        "friend_request_flag": false,
+        "friendship": 2,
+        "home_id": 186,
+        "inside_rank": 0,
+        "is_circle_invite": true,
+        "is_circle_member": false,
+        "last_play_at": 1739763933,
+        "main_circle": {
+          "circle_id": "",
+          "circle_name": "",
+          "data_exist": false,
+          "emblem": {
+            "emblem_base": 0,
+            "emblem_base_color": 0,
+            "emblem_frame": 0,
+            "emblem_frame_color": 0,
+            "emblem_pattern": 0,
+            "emblem_pattern_color": 0,
+            "emblem_pattern_horizontal_inversion": false,
+            "emblem_pattern_vertical_inversion": false,
+            "emblem_processing": 0,
+            "emblem_symbol1": 0,
+            "emblem_symbol1_clipping": false,
+            "emblem_symbol1_color": 0,
+            "emblem_symbol1_horizontal_inversion": false,
+            "emblem_symbol1_vertical_inversion": false,
+            "emblem_symbol2": 0,
+            "emblem_symbol2_clipping": false,
+            "emblem_symbol2_color": 0,
+            "emblem_symbol2_horizontal_inversion": false,
+            "emblem_symbol2_vertical_inversion": false
+          },
+          "leader": {
+            "fighter_id": "",
+            "platform_id": 0,
+            "short_id": 0
+          }
+        },
+        "max_content_play_time": {
+          "content_type": 1,
+          "play_time": 33938
+        },
+        "mobile_linkage": false,
+        "online_status_info": {
+          "battlehub_admission_restriction": 0,
+          "battlehub_id": "",
+          "battlehub_platform_id": 0,
+          "battlehub_region_id": 0,
+          "battlehub_server_no": 0,
+          "custom_room_master_short_id": 0,
+          "custom_room_platform_id": 0,
+          "custom_room_publish_setting": 1,
+          "custom_room_region_id": 0,
+          "custom_room_required_network_connection_quality": 0,
+          "custom_room_required_pass_code": false,
+          "custom_room_room_id": "",
+          "online_status": 1,
+          "online_status_data": {
+            "online_status_name": "Offline",
+            "online_status_type": 1
+          },
+          "battlehub_region_name": "",
+          "battlehub_formated_server_no": "9000"
+        },
+        "personal_info": {
+          "fighter_id": "Canvas",
+          "platform_id": 4,
+          "short_id": 1871707829,
+          "platform_name": "CrossPlatform",
+          "platform_tool_name": "cross"
+        },
+        "play_time_zone": {
+          "end_hour": 3,
+          "end_minute": 30,
+          "start_hour": 3,
+          "start_minute": 0
+        },
+        "profile_comment": {
+          "profile_tag_id": 1,
+          "tag_option_id": 0
+        },
+        "title_plate": 10001,
+        "favorite_character_name": "Cammy",
+        "favorite_character_tool_name": "cammy",
+        "title_data": {
+          "title_data_id": 10001,
+          "title_data_grade_id": 1,
+          "title_data_grade_name": "銅",
+          "title_data_plate_id": 122,
+          "title_data_plate_name": "122-8bb65d811510d0e60b605476864239",
+          "title_data_val": "Let's Do This"
+        },
+        "home_name": "United States"
+      },
+      {
+        "allow_cross_play": true,
+        "battle_input_type": 1,
+        "custom_room_invite_setting": 1,
+        "enjoy_total_point": 1,
+        "favorite_character_id": 2,
+        "favorite_character_league_info": {
+          "league_point": 0,
+          "league_rank": 1,
+          "master_league": 0,
+          "master_rating": 0,
+          "master_rating_ranking": 0
+        },
+        "favorite_character_play_point": {
+          "battle_hub": 30,
+          "fighting_ground": 452,
+          "world_tour": 10
+        },
+        "friend_request_flag": false,
+        "friendship": 2,
+        "home_id": 36,
+        "inside_rank": 0,
+        "is_circle_invite": true,
+        "is_circle_member": false,
+        "last_play_at": 1737268739,
+        "main_circle": {
+          "circle_id": "",
+          "circle_name": "",
+          "data_exist": false,
+          "emblem": {
+            "emblem_base": 0,
+            "emblem_base_color": 0,
+            "emblem_frame": 0,
+            "emblem_frame_color": 0,
+            "emblem_pattern": 0,
+            "emblem_pattern_color": 0,
+            "emblem_pattern_horizontal_inversion": false,
+            "emblem_pattern_vertical_inversion": false,
+            "emblem_processing": 0,
+            "emblem_symbol1": 0,
+            "emblem_symbol1_clipping": false,
+            "emblem_symbol1_color": 0,
+            "emblem_symbol1_horizontal_inversion": false,
+            "emblem_symbol1_vertical_inversion": false,
+            "emblem_symbol2": 0,
+            "emblem_symbol2_clipping": false,
+            "emblem_symbol2_color": 0,
+            "emblem_symbol2_horizontal_inversion": false,
+            "emblem_symbol2_vertical_inversion": false
+          },
+          "leader": {
+            "fighter_id": "",
+            "platform_id": 0,
+            "short_id": 0
+          }
+        },
+        "max_content_play_time": {
+          "content_type": 8,
+          "play_time": 2555
+        },
+        "mobile_linkage": false,
+        "online_status_info": {
+          "battlehub_admission_restriction": 0,
+          "battlehub_id": "",
+          "battlehub_platform_id": 0,
+          "battlehub_region_id": 0,
+          "battlehub_server_no": 0,
+          "custom_room_master_short_id": 0,
+          "custom_room_platform_id": 0,
+          "custom_room_publish_setting": 1,
+          "custom_room_region_id": 0,
+          "custom_room_required_network_connection_quality": 0,
+          "custom_room_required_pass_code": false,
+          "custom_room_room_id": "",
+          "online_status": 1,
+          "online_status_data": {
+            "online_status_name": "Offline",
+            "online_status_type": 1
+          },
+          "battlehub_region_name": "",
+          "battlehub_formated_server_no": "9000"
+        },
+        "personal_info": {
+          "fighter_id": "Canvas",
+          "platform_id": 5,
+          "short_id": 3434069709,
+          "platform_name": "Steam",
+          "platform_tool_name": "steam"
+        },
+        "play_time_zone": {
+          "end_hour": 5,
+          "end_minute": 0,
+          "start_hour": 4,
+          "start_minute": 30
+        },
+        "profile_comment": {
+          "profile_tag_id": 1,
+          "tag_option_id": 0
+        },
+        "title_plate": 10001,
+        "favorite_character_name": "Luke",
+        "favorite_character_tool_name": "luke",
+        "title_data": {
+          "title_data_id": 10001,
+          "title_data_grade_id": 1,
+          "title_data_grade_name": "銅",
+          "title_data_plate_id": 122,
+          "title_data_plate_name": "122-8bb65d811510d0e60b605476864239",
+          "title_data_val": "Let's Do This"
+        },
+        "home_name": "China"
+      },
+      {
+        "allow_cross_play": true,
+        "battle_input_type": 1,
+        "custom_room_invite_setting": 1,
+        "enjoy_total_point": 0,
+        "favorite_character_id": 2,
+        "favorite_character_league_info": {
+          "league_point": -1,
+          "league_rank": 39,
+          "master_league": 0,
+          "master_rating": 0,
+          "master_rating_ranking": 0
+        },
+        "favorite_character_play_point": {
+          "battle_hub": 0,
+          "fighting_ground": 0,
+          "world_tour": 40
+        },
+        "friend_request_flag": false,
+        "friendship": 2,
+        "home_id": 36,
+        "inside_rank": 0,
+        "is_circle_invite": true,
+        "is_circle_member": false,
+        "last_play_at": 1733978551,
+        "main_circle": {
+          "circle_id": "",
+          "circle_name": "",
+          "data_exist": false,
+          "emblem": {
+            "emblem_base": 0,
+            "emblem_base_color": 0,
+            "emblem_frame": 0,
+            "emblem_frame_color": 0,
+            "emblem_pattern": 0,
+            "emblem_pattern_color": 0,
+            "emblem_pattern_horizontal_inversion": false,
+            "emblem_pattern_vertical_inversion": false,
+            "emblem_processing": 0,
+            "emblem_symbol1": 0,
+            "emblem_symbol1_clipping": false,
+            "emblem_symbol1_color": 0,
+            "emblem_symbol1_horizontal_inversion": false,
+            "emblem_symbol1_vertical_inversion": false,
+            "emblem_symbol2": 0,
+            "emblem_symbol2_clipping": false,
+            "emblem_symbol2_color": 0,
+            "emblem_symbol2_horizontal_inversion": false,
+            "emblem_symbol2_vertical_inversion": false
+          },
+          "leader": {
+            "fighter_id": "",
+            "platform_id": 0,
+            "short_id": 0
+          }
+        },
+        "max_content_play_time": {
+          "content_type": 7,
+          "play_time": 1317
+        },
+        "mobile_linkage": false,
+        "online_status_info": {
+          "battlehub_admission_restriction": 0,
+          "battlehub_id": "",
+          "battlehub_platform_id": 0,
+          "battlehub_region_id": 0,
+          "battlehub_server_no": 0,
+          "custom_room_master_short_id": 0,
+          "custom_room_platform_id": 0,
+          "custom_room_publish_setting": 1,
+          "custom_room_region_id": 0,
+          "custom_room_required_network_connection_quality": 0,
+          "custom_room_required_pass_code": false,
+          "custom_room_room_id": "",
+          "online_status": 1,
+          "online_status_data": {
+            "online_status_name": "Offline",
+            "online_status_type": 1
+          },
+          "battlehub_region_name": "",
+          "battlehub_formated_server_no": "9000"
+        },
+        "personal_info": {
+          "fighter_id": "Canvasa",
+          "platform_id": 5,
+          "short_id": 3356625899,
+          "platform_name": "Steam",
+          "platform_tool_name": "steam"
+        },
+        "play_time_zone": {
+          "end_hour": 4,
+          "end_minute": 30,
+          "start_hour": 4,
+          "start_minute": 0
+        },
+        "profile_comment": {
+          "profile_tag_id": 1,
+          "tag_option_id": 0
+        },
+        "title_plate": 10001,
+        "favorite_character_name": "Luke",
+        "favorite_character_tool_name": "luke",
+        "title_data": {
+          "title_data_id": 10001,
+          "title_data_grade_id": 1,
+          "title_data_grade_name": "銅",
+          "title_data_plate_id": 122,
+          "title_data_plate_name": "122-8bb65d811510d0e60b605476864239",
+          "title_data_val": "Let's Do This"
+        },
+        "home_name": "China"
+      },
+      {
+        "allow_cross_play": true,
+        "battle_input_type": 0,
+        "custom_room_invite_setting": 1,
+        "enjoy_total_point": 44,
+        "favorite_character_id": 13,
+        "favorite_character_league_info": {
+          "league_point": -1,
+          "league_rank": 39,
+          "master_league": 0,
+          "master_rating": 0,
+          "master_rating_ranking": 0
+        },
+        "favorite_character_play_point": {
+          "battle_hub": 0,
+          "fighting_ground": 455,
+          "world_tour": 0
+        },
+        "friend_request_flag": false,
+        "friendship": 2,
+        "home_id": 186,
+        "inside_rank": 1,
+        "is_circle_invite": true,
+        "is_circle_member": false,
+        "last_play_at": 1724534349,
+        "main_circle": {
+          "circle_id": "",
+          "circle_name": "",
+          "data_exist": false,
+          "emblem": {
+            "emblem_base": 0,
+            "emblem_base_color": 0,
+            "emblem_frame": 0,
+            "emblem_frame_color": 0,
+            "emblem_pattern": 0,
+            "emblem_pattern_color": 0,
+            "emblem_pattern_horizontal_inversion": false,
+            "emblem_pattern_vertical_inversion": false,
+            "emblem_processing": 0,
+            "emblem_symbol1": 0,
+            "emblem_symbol1_clipping": false,
+            "emblem_symbol1_color": 0,
+            "emblem_symbol1_horizontal_inversion": false,
+            "emblem_symbol1_vertical_inversion": false,
+            "emblem_symbol2": 0,
+            "emblem_symbol2_clipping": false,
+            "emblem_symbol2_color": 0,
+            "emblem_symbol2_horizontal_inversion": false,
+            "emblem_symbol2_vertical_inversion": false
+          },
+          "leader": {
+            "fighter_id": "",
+            "platform_id": 0,
+            "short_id": 0
+          }
+        },
+        "max_content_play_time": {
+          "content_type": 8,
+          "play_time": 85494
+        },
+        "mobile_linkage": false,
+        "online_status_info": {
+          "battlehub_admission_restriction": 0,
+          "battlehub_id": "",
+          "battlehub_platform_id": 0,
+          "battlehub_region_id": 0,
+          "battlehub_server_no": 0,
+          "custom_room_master_short_id": 0,
+          "custom_room_platform_id": 0,
+          "custom_room_publish_setting": 1,
+          "custom_room_region_id": 0,
+          "custom_room_required_network_connection_quality": 0,
+          "custom_room_required_pass_code": false,
+          "custom_room_room_id": "",
+          "online_status": 1,
+          "online_status_data": {
+            "online_status_name": "Offline",
+            "online_status_type": 1
+          },
+          "battlehub_region_name": "",
+          "battlehub_formated_server_no": "9000"
+        },
+        "personal_info": {
+          "fighter_id": "Canvasowl",
+          "platform_id": 2,
+          "short_id": 2534487524,
+          "platform_name": "CrossPlatform",
+          "platform_tool_name": "cross"
+        },
+        "play_time_zone": {
+          "end_hour": 21,
+          "end_minute": 30,
+          "start_hour": 21,
+          "start_minute": 0
+        },
+        "profile_comment": {
+          "profile_tag_id": 2,
+          "tag_option_id": 0
+        },
+        "title_plate": 10001,
+        "favorite_character_name": "A.K.I.",
+        "favorite_character_tool_name": "aki",
+        "title_data": {
+          "title_data_id": 10001,
+          "title_data_grade_id": 1,
+          "title_data_grade_name": "銅",
+          "title_data_plate_id": 122,
+          "title_data_plate_name": "122-8bb65d811510d0e60b605476864239",
+          "title_data_val": "Let's Do This"
+        },
+        "home_name": "United States"
+      },
+      {
+        "allow_cross_play": true,
+        "battle_input_type": 1,
+        "custom_room_invite_setting": 1,
+        "enjoy_total_point": 96,
+        "favorite_character_id": 2,
+        "favorite_character_league_info": {
+          "league_point": 23128,
+          "league_rank": 34,
+          "master_league": 0,
+          "master_rating": 0,
+          "master_rating_ranking": 0
+        },
+        "favorite_character_play_point": {
+          "battle_hub": 0,
+          "fighting_ground": 48377,
+          "world_tour": 0
+        },
+        "friend_request_flag": false,
+        "friendship": 2,
+        "home_id": 184,
+        "inside_rank": 2,
+        "is_circle_invite": true,
+        "is_circle_member": false,
+        "last_play_at": 1722978968,
+        "main_circle": {
+          "circle_id": "",
+          "circle_name": "",
+          "data_exist": false,
+          "emblem": {
+            "emblem_base": 0,
+            "emblem_base_color": 0,
+            "emblem_frame": 0,
+            "emblem_frame_color": 0,
+            "emblem_pattern": 0,
+            "emblem_pattern_color": 0,
+            "emblem_pattern_horizontal_inversion": false,
+            "emblem_pattern_vertical_inversion": false,
+            "emblem_processing": 0,
+            "emblem_symbol1": 0,
+            "emblem_symbol1_clipping": false,
+            "emblem_symbol1_color": 0,
+            "emblem_symbol1_horizontal_inversion": false,
+            "emblem_symbol1_vertical_inversion": false,
+            "emblem_symbol2": 0,
+            "emblem_symbol2_clipping": false,
+            "emblem_symbol2_color": 0,
+            "emblem_symbol2_horizontal_inversion": false,
+            "emblem_symbol2_vertical_inversion": false
+          },
+          "leader": {
+            "fighter_id": "",
+            "platform_id": 0,
+            "short_id": 0
+          }
+        },
+        "max_content_play_time": {
+          "content_type": 2,
+          "play_time": 233370
+        },
+        "mobile_linkage": false,
+        "online_status_info": {
+          "battlehub_admission_restriction": 0,
+          "battlehub_id": "",
+          "battlehub_platform_id": 0,
+          "battlehub_region_id": 0,
+          "battlehub_server_no": 0,
+          "custom_room_master_short_id": 0,
+          "custom_room_platform_id": 0,
+          "custom_room_publish_setting": 1,
+          "custom_room_region_id": 0,
+          "custom_room_required_network_connection_quality": 0,
+          "custom_room_required_pass_code": false,
+          "custom_room_room_id": "",
+          "online_status": 1,
+          "online_status_data": {
+            "online_status_name": "Offline",
+            "online_status_type": 1
+          },
+          "battlehub_region_name": "",
+          "battlehub_formated_server_no": "9000"
+        },
+        "personal_info": {
+          "fighter_id": "Canvasround",
+          "platform_id": 5,
+          "short_id": 3871677902,
+          "platform_name": "Steam",
+          "platform_tool_name": "steam"
+        },
+        "play_time_zone": {
+          "end_hour": 18,
+          "end_minute": 30,
+          "start_hour": 17,
+          "start_minute": 30
+        },
+        "profile_comment": {
+          "profile_tag_id": 3,
+          "tag_option_id": 2
+        },
+        "title_plate": 10179,
+        "favorite_character_name": "Luke",
+        "favorite_character_tool_name": "luke",
+        "title_data": {
+          "title_data_id": 10179,
+          "title_data_grade_id": 1,
+          "title_data_grade_name": "銅",
+          "title_data_plate_id": 7111,
+          "title_data_plate_name": "7111-6ee6fbd54c49928648ce45bbc1bd6e",
+          "title_data_val": "Not Now. I'm Gaming."
+        },
+        "home_name": "United Kingdom"
+      },
+      {
+        "allow_cross_play": true,
+        "battle_input_type": 0,
+        "custom_room_invite_setting": 1,
+        "enjoy_total_point": 1,
+        "favorite_character_id": 1,
+        "favorite_character_league_info": {
+          "league_point": -1,
+          "league_rank": 39,
+          "master_league": 0,
+          "master_rating": 0,
+          "master_rating_ranking": 0
+        },
+        "favorite_character_play_point": {
+          "battle_hub": 20,
+          "fighting_ground": 5,
+          "world_tour": 868
+        },
+        "friend_request_flag": false,
+        "friendship": 2,
+        "home_id": 186,
+        "inside_rank": 0,
+        "is_circle_invite": true,
+        "is_circle_member": false,
+        "last_play_at": 1718676118,
+        "main_circle": {
+          "circle_id": "",
+          "circle_name": "",
+          "data_exist": false,
+          "emblem": {
+            "emblem_base": 0,
+            "emblem_base_color": 0,
+            "emblem_frame": 0,
+            "emblem_frame_color": 0,
+            "emblem_pattern": 0,
+            "emblem_pattern_color": 0,
+            "emblem_pattern_horizontal_inversion": false,
+            "emblem_pattern_vertical_inversion": false,
+            "emblem_processing": 0,
+            "emblem_symbol1": 0,
+            "emblem_symbol1_clipping": false,
+            "emblem_symbol1_color": 0,
+            "emblem_symbol1_horizontal_inversion": false,
+            "emblem_symbol1_vertical_inversion": false,
+            "emblem_symbol2": 0,
+            "emblem_symbol2_clipping": false,
+            "emblem_symbol2_color": 0,
+            "emblem_symbol2_horizontal_inversion": false,
+            "emblem_symbol2_vertical_inversion": false
+          },
+          "leader": {
+            "fighter_id": "",
+            "platform_id": 0,
+            "short_id": 0
+          }
+        },
+        "max_content_play_time": {
+          "content_type": 1,
+          "play_time": 541818
+        },
+        "mobile_linkage": false,
+        "online_status_info": {
+          "battlehub_admission_restriction": 0,
+          "battlehub_id": "",
+          "battlehub_platform_id": 0,
+          "battlehub_region_id": 0,
+          "battlehub_server_no": 0,
+          "custom_room_master_short_id": 0,
+          "custom_room_platform_id": 0,
+          "custom_room_publish_setting": 1,
+          "custom_room_region_id": 0,
+          "custom_room_required_network_connection_quality": 0,
+          "custom_room_required_pass_code": false,
+          "custom_room_room_id": "",
+          "online_status": 1,
+          "online_status_data": {
+            "online_status_name": "Offline",
+            "online_status_type": 1
+          },
+          "battlehub_region_name": "",
+          "battlehub_formated_server_no": "9000"
+        },
+        "personal_info": {
+          "fighter_id": "Canvas",
+          "platform_id": 2,
+          "short_id": 2876822867,
+          "platform_name": "CrossPlatform",
+          "platform_tool_name": "cross"
+        },
+        "play_time_zone": {
+          "end_hour": 0,
+          "end_minute": 0,
+          "start_hour": 23,
+          "start_minute": 30
+        },
+        "profile_comment": {
+          "profile_tag_id": 12,
+          "tag_option_id": 0
+        },
+        "title_plate": 10580,
+        "favorite_character_name": "Ryu",
+        "favorite_character_tool_name": "ryu",
+        "title_data": {
+          "title_data_id": 10580,
+          "title_data_grade_id": 3,
+          "title_data_grade_name": "金",
+          "title_data_plate_id": 43,
+          "title_data_plate_name": "43-6ecabda8cded84e4fa28112d166c09",
+          "title_data_val": "Valedictorian"
+        },
+        "home_name": "United States"
+      },
+      {
+        "allow_cross_play": true,
+        "battle_input_type": 1,
+        "custom_room_invite_setting": 1,
+        "enjoy_total_point": 1,
+        "favorite_character_id": 17,
+        "favorite_character_league_info": {
+          "league_point": -1,
+          "league_rank": 39,
+          "master_league": 0,
+          "master_rating": 0,
+          "master_rating_ranking": 0
+        },
+        "favorite_character_play_point": {
+          "battle_hub": 0,
+          "fighting_ground": 159,
+          "world_tour": 0
+        },
+        "friend_request_flag": false,
+        "friendship": 2,
+        "home_id": 85,
+        "inside_rank": 0,
+        "is_circle_invite": true,
+        "is_circle_member": false,
+        "last_play_at": 1717514784,
+        "main_circle": {
+          "circle_id": "",
+          "circle_name": "",
+          "data_exist": false,
+          "emblem": {
+            "emblem_base": 0,
+            "emblem_base_color": 0,
+            "emblem_frame": 0,
+            "emblem_frame_color": 0,
+            "emblem_pattern": 0,
+            "emblem_pattern_color": 0,
+            "emblem_pattern_horizontal_inversion": false,
+            "emblem_pattern_vertical_inversion": false,
+            "emblem_processing": 0,
+            "emblem_symbol1": 0,
+            "emblem_symbol1_clipping": false,
+            "emblem_symbol1_color": 0,
+            "emblem_symbol1_horizontal_inversion": false,
+            "emblem_symbol1_vertical_inversion": false,
+            "emblem_symbol2": 0,
+            "emblem_symbol2_clipping": false,
+            "emblem_symbol2_color": 0,
+            "emblem_symbol2_horizontal_inversion": false,
+            "emblem_symbol2_vertical_inversion": false
+          },
+          "leader": {
+            "fighter_id": "",
+            "platform_id": 0,
+            "short_id": 0
+          }
+        },
+        "max_content_play_time": {
+          "content_type": 5,
+          "play_time": 10635
+        },
+        "mobile_linkage": false,
+        "online_status_info": {
+          "battlehub_admission_restriction": 0,
+          "battlehub_id": "",
+          "battlehub_platform_id": 0,
+          "battlehub_region_id": 0,
+          "battlehub_server_no": 0,
+          "custom_room_master_short_id": 0,
+          "custom_room_platform_id": 0,
+          "custom_room_publish_setting": 1,
+          "custom_room_region_id": 0,
+          "custom_room_required_network_connection_quality": 0,
+          "custom_room_required_pass_code": false,
+          "custom_room_room_id": "",
+          "online_status": 1,
+          "online_status_data": {
+            "online_status_name": "Offline",
+            "online_status_type": 1
+          },
+          "battlehub_region_name": "",
+          "battlehub_formated_server_no": "9000"
+        },
+        "personal_info": {
+          "fighter_id": "Canvas",
+          "platform_id": 5,
+          "short_id": 3963518883,
+          "platform_name": "Steam",
+          "platform_tool_name": "steam"
+        },
+        "play_time_zone": {
+          "end_hour": 15,
+          "end_minute": 30,
+          "start_hour": 15,
+          "start_minute": 0
+        },
+        "profile_comment": {
+          "profile_tag_id": 1,
+          "tag_option_id": 0
+        },
+        "title_plate": 10001,
+        "favorite_character_name": "Marisa",
+        "favorite_character_tool_name": "marisa",
+        "title_data": {
+          "title_data_id": 10001,
+          "title_data_grade_id": 1,
+          "title_data_grade_name": "銅",
+          "title_data_plate_id": 122,
+          "title_data_plate_name": "122-8bb65d811510d0e60b605476864239",
+          "title_data_val": "Let's Do This"
+        },
+        "home_name": "Japan"
+      },
+      {
+        "allow_cross_play": true,
+        "battle_input_type": 0,
+        "custom_room_invite_setting": 1,
+        "enjoy_total_point": 37,
+        "favorite_character_id": 3,
+        "favorite_character_league_info": {
+          "league_point": 3054,
+          "league_rank": 11,
+          "master_league": 0,
+          "master_rating": 0,
+          "master_rating_ranking": 0
+        },
+        "favorite_character_play_point": {
+          "battle_hub": 8250,
+          "fighting_ground": 830,
+          "world_tour": 0
+        },
+        "friend_request_flag": false,
+        "friendship": 2,
+        "home_id": 184,
+        "inside_rank": 1,
+        "is_circle_invite": true,
+        "is_circle_member": false,
+        "last_play_at": 1705262378,
+        "main_circle": {
+          "circle_id": "",
+          "circle_name": "",
+          "data_exist": false,
+          "emblem": {
+            "emblem_base": 0,
+            "emblem_base_color": 0,
+            "emblem_frame": 0,
+            "emblem_frame_color": 0,
+            "emblem_pattern": 0,
+            "emblem_pattern_color": 0,
+            "emblem_pattern_horizontal_inversion": false,
+            "emblem_pattern_vertical_inversion": false,
+            "emblem_processing": 0,
+            "emblem_symbol1": 0,
+            "emblem_symbol1_clipping": false,
+            "emblem_symbol1_color": 0,
+            "emblem_symbol1_horizontal_inversion": false,
+            "emblem_symbol1_vertical_inversion": false,
+            "emblem_symbol2": 0,
+            "emblem_symbol2_clipping": false,
+            "emblem_symbol2_color": 0,
+            "emblem_symbol2_horizontal_inversion": false,
+            "emblem_symbol2_vertical_inversion": false
+          },
+          "leader": {
+            "fighter_id": "",
+            "platform_id": 0,
+            "short_id": 0
+          }
+        },
+        "max_content_play_time": {
+          "content_type": 5,
+          "play_time": 61005
+        },
+        "mobile_linkage": false,
+        "online_status_info": {
+          "battlehub_admission_restriction": 0,
+          "battlehub_id": "",
+          "battlehub_platform_id": 0,
+          "battlehub_region_id": 0,
+          "battlehub_server_no": 0,
+          "custom_room_master_short_id": 0,
+          "custom_room_platform_id": 0,
+          "custom_room_publish_setting": 1,
+          "custom_room_region_id": 0,
+          "custom_room_required_network_connection_quality": 0,
+          "custom_room_required_pass_code": false,
+          "custom_room_room_id": "",
+          "online_status": 1,
+          "online_status_data": {
+            "online_status_name": "Offline",
+            "online_status_type": 1
+          },
+          "battlehub_region_name": "",
+          "battlehub_formated_server_no": "9000"
+        },
+        "personal_info": {
+          "fighter_id": "Canvas",
+          "platform_id": 4,
+          "short_id": 1508590973,
+          "platform_name": "CrossPlatform",
+          "platform_tool_name": "cross"
+        },
+        "play_time_zone": {
+          "end_hour": 23,
+          "end_minute": 0,
+          "start_hour": 22,
+          "start_minute": 30
+        },
+        "profile_comment": {
+          "profile_tag_id": 7,
+          "tag_option_id": 0
+        },
+        "title_plate": 10434,
+        "favorite_character_name": "Kimberly",
+        "favorite_character_tool_name": "kimberly",
+        "title_data": {
+          "title_data_id": 10434,
+          "title_data_grade_id": 2,
+          "title_data_grade_name": "銀",
+          "title_data_plate_id": 7157,
+          "title_data_plate_name": "7157-3d6de7b6ff85538277db06fc67250d",
+          "title_data_val": "Color-Smoke Kunoichi"
+        },
+        "home_name": "United Kingdom"
+      },
+      {
+        "allow_cross_play": true,
+        "battle_input_type": 1,
+        "custom_room_invite_setting": 1,
+        "enjoy_total_point": 0,
+        "favorite_character_id": 6,
+        "favorite_character_league_info": {
+          "league_point": -1,
+          "league_rank": 39,
+          "master_league": 0,
+          "master_rating": 0,
+          "master_rating_ranking": 0
+        },
+        "favorite_character_play_point": {
+          "battle_hub": 0,
+          "fighting_ground": 527,
+          "world_tour": 0
+        },
+        "friend_request_flag": false,
+        "friendship": 2,
+        "home_id": 999,
+        "inside_rank": 0,
+        "is_circle_invite": true,
+        "is_circle_member": false,
+        "last_play_at": 1704859338,
+        "main_circle": {
+          "circle_id": "",
+          "circle_name": "",
+          "data_exist": false,
+          "emblem": {
+            "emblem_base": 0,
+            "emblem_base_color": 0,
+            "emblem_frame": 0,
+            "emblem_frame_color": 0,
+            "emblem_pattern": 0,
+            "emblem_pattern_color": 0,
+            "emblem_pattern_horizontal_inversion": false,
+            "emblem_pattern_vertical_inversion": false,
+            "emblem_processing": 0,
+            "emblem_symbol1": 0,
+            "emblem_symbol1_clipping": false,
+            "emblem_symbol1_color": 0,
+            "emblem_symbol1_horizontal_inversion": false,
+            "emblem_symbol1_vertical_inversion": false,
+            "emblem_symbol2": 0,
+            "emblem_symbol2_clipping": false,
+            "emblem_symbol2_color": 0,
+            "emblem_symbol2_horizontal_inversion": false,
+            "emblem_symbol2_vertical_inversion": false
+          },
+          "leader": {
+            "fighter_id": "",
+            "platform_id": 0,
+            "short_id": 0
+          }
+        },
+        "max_content_play_time": {
+          "content_type": 4,
+          "play_time": 28573
+        },
+        "mobile_linkage": false,
+        "online_status_info": {
+          "battlehub_admission_restriction": 0,
+          "battlehub_id": "",
+          "battlehub_platform_id": 0,
+          "battlehub_region_id": 0,
+          "battlehub_server_no": 0,
+          "custom_room_master_short_id": 0,
+          "custom_room_platform_id": 0,
+          "custom_room_publish_setting": 1,
+          "custom_room_region_id": 0,
+          "custom_room_required_network_connection_quality": 0,
+          "custom_room_required_pass_code": false,
+          "custom_room_room_id": "",
+          "online_status": 1,
+          "online_status_data": {
+            "online_status_name": "Offline",
+            "online_status_type": 1
+          },
+          "battlehub_region_name": "",
+          "battlehub_formated_server_no": "9000"
+        },
+        "personal_info": {
+          "fighter_id": "Canvas.EXE",
+          "platform_id": 5,
+          "short_id": 1550452676,
+          "platform_name": "Steam",
+          "platform_tool_name": "steam"
+        },
+        "play_time_zone": {
+          "end_hour": 0,
+          "end_minute": 0,
+          "start_hour": 23,
+          "start_minute": 0
+        },
+        "profile_comment": {
+          "profile_tag_id": 6,
+          "tag_option_id": 0
+        },
+        "title_plate": 10001,
+        "favorite_character_name": "Zangief",
+        "favorite_character_tool_name": "zangief",
+        "title_data": {
+          "title_data_id": 10001,
+          "title_data_grade_id": 1,
+          "title_data_grade_name": "銅",
+          "title_data_plate_id": 122,
+          "title_data_plate_name": "122-8bb65d811510d0e60b605476864239",
+          "title_data_val": "Let's Do This"
+        },
+        "home_name": "Other"
+      },
+      {
+        "allow_cross_play": true,
+        "battle_input_type": 0,
+        "custom_room_invite_setting": 1,
+        "enjoy_total_point": 1,
+        "favorite_character_id": 6,
+        "favorite_character_league_info": {
+          "league_point": -1,
+          "league_rank": 39,
+          "master_league": 0,
+          "master_rating": 0,
+          "master_rating_ranking": 0
+        },
+        "favorite_character_play_point": {
+          "battle_hub": 0,
+          "fighting_ground": 750,
+          "world_tour": 0
+        },
+        "friend_request_flag": false,
+        "friendship": 2,
+        "home_id": 32,
+        "inside_rank": 0,
+        "is_circle_invite": true,
+        "is_circle_member": false,
+        "last_play_at": 1703828638,
+        "main_circle": {
+          "circle_id": "",
+          "circle_name": "",
+          "data_exist": false,
+          "emblem": {
+            "emblem_base": 0,
+            "emblem_base_color": 0,
+            "emblem_frame": 0,
+            "emblem_frame_color": 0,
+            "emblem_pattern": 0,
+            "emblem_pattern_color": 0,
+            "emblem_pattern_horizontal_inversion": false,
+            "emblem_pattern_vertical_inversion": false,
+            "emblem_processing": 0,
+            "emblem_symbol1": 0,
+            "emblem_symbol1_clipping": false,
+            "emblem_symbol1_color": 0,
+            "emblem_symbol1_horizontal_inversion": false,
+            "emblem_symbol1_vertical_inversion": false,
+            "emblem_symbol2": 0,
+            "emblem_symbol2_clipping": false,
+            "emblem_symbol2_color": 0,
+            "emblem_symbol2_horizontal_inversion": false,
+            "emblem_symbol2_vertical_inversion": false
+          },
+          "leader": {
+            "fighter_id": "",
+            "platform_id": 0,
+            "short_id": 0
+          }
+        },
+        "max_content_play_time": {
+          "content_type": 7,
+          "play_time": 34311
+        },
+        "mobile_linkage": false,
+        "online_status_info": {
+          "battlehub_admission_restriction": 0,
+          "battlehub_id": "",
+          "battlehub_platform_id": 0,
+          "battlehub_region_id": 0,
+          "battlehub_server_no": 0,
+          "custom_room_master_short_id": 0,
+          "custom_room_platform_id": 0,
+          "custom_room_publish_setting": 1,
+          "custom_room_region_id": 0,
+          "custom_room_required_network_connection_quality": 0,
+          "custom_room_required_pass_code": false,
+          "custom_room_room_id": "",
+          "online_status": 1,
+          "online_status_data": {
+            "online_status_name": "Offline",
+            "online_status_type": 1
+          },
+          "battlehub_region_name": "",
+          "battlehub_formated_server_no": "9000"
+        },
+        "personal_info": {
+          "fighter_id": "Canvas19",
+          "platform_id": 5,
+          "short_id": 1765643007,
+          "platform_name": "Steam",
+          "platform_tool_name": "steam"
+        },
+        "play_time_zone": {
+          "end_hour": 3,
+          "end_minute": 30,
+          "start_hour": 3,
+          "start_minute": 0
+        },
+        "profile_comment": {
+          "profile_tag_id": 1,
+          "tag_option_id": 0
+        },
+        "title_plate": 10001,
+        "favorite_character_name": "Zangief",
+        "favorite_character_tool_name": "zangief",
+        "title_data": {
+          "title_data_id": 10001,
+          "title_data_grade_id": 1,
+          "title_data_grade_name": "銅",
+          "title_data_plate_id": 122,
+          "title_data_plate_name": "122-8bb65d811510d0e60b605476864239",
+          "title_data_val": "Let's Do This"
+        },
+        "home_name": "Canada"
+      },
+      {
+        "allow_cross_play": true,
+        "battle_input_type": 1,
+        "custom_room_invite_setting": 1,
+        "enjoy_total_point": 0,
+        "favorite_character_id": 2,
+        "favorite_character_league_info": {
+          "league_point": -1,
+          "league_rank": 39,
+          "master_league": 0,
+          "master_rating": 0,
+          "master_rating_ranking": 0
+        },
+        "favorite_character_play_point": {
+          "battle_hub": 0,
+          "fighting_ground": 0,
+          "world_tour": 127
+        },
+        "friend_request_flag": false,
+        "friendship": 2,
+        "home_id": 85,
+        "inside_rank": 0,
+        "is_circle_invite": true,
+        "is_circle_member": false,
+        "last_play_at": 1686663442,
+        "main_circle": {
+          "circle_id": "",
+          "circle_name": "",
+          "data_exist": false,
+          "emblem": {
+            "emblem_base": 0,
+            "emblem_base_color": 0,
+            "emblem_frame": 0,
+            "emblem_frame_color": 0,
+            "emblem_pattern": 0,
+            "emblem_pattern_color": 0,
+            "emblem_pattern_horizontal_inversion": false,
+            "emblem_pattern_vertical_inversion": false,
+            "emblem_processing": 0,
+            "emblem_symbol1": 0,
+            "emblem_symbol1_clipping": false,
+            "emblem_symbol1_color": 0,
+            "emblem_symbol1_horizontal_inversion": false,
+            "emblem_symbol1_vertical_inversion": false,
+            "emblem_symbol2": 0,
+            "emblem_symbol2_clipping": false,
+            "emblem_symbol2_color": 0,
+            "emblem_symbol2_horizontal_inversion": false,
+            "emblem_symbol2_vertical_inversion": false
+          },
+          "leader": {
+            "fighter_id": "",
+            "platform_id": 0,
+            "short_id": 0
+          }
+        },
+        "max_content_play_time": {
+          "content_type": 1,
+          "play_time": 7227
+        },
+        "mobile_linkage": false,
+        "online_status_info": {
+          "battlehub_admission_restriction": 0,
+          "battlehub_id": "",
+          "battlehub_platform_id": 0,
+          "battlehub_region_id": 0,
+          "battlehub_server_no": 0,
+          "custom_room_master_short_id": 0,
+          "custom_room_platform_id": 0,
+          "custom_room_publish_setting": 1,
+          "custom_room_region_id": 0,
+          "custom_room_required_network_connection_quality": 0,
+          "custom_room_required_pass_code": false,
+          "custom_room_room_id": "",
+          "online_status": 1,
+          "online_status_data": {
+            "online_status_name": "Offline",
+            "online_status_type": 1
+          },
+          "battlehub_region_name": "",
+          "battlehub_formated_server_no": "9000"
+        },
+        "personal_info": {
+          "fighter_id": "CANVAS",
+          "platform_id": 2,
+          "short_id": 1118355013,
+          "platform_name": "CrossPlatform",
+          "platform_tool_name": "cross"
+        },
+        "play_time_zone": {
+          "end_hour": 7,
+          "end_minute": 30,
+          "start_hour": 5,
+          "start_minute": 30
+        },
+        "profile_comment": {
+          "profile_tag_id": 1,
+          "tag_option_id": 0
+        },
+        "title_plate": 10001,
+        "favorite_character_name": "Luke",
+        "favorite_character_tool_name": "luke",
+        "title_data": {
+          "title_data_id": 10001,
+          "title_data_grade_id": 1,
+          "title_data_grade_name": "銅",
+          "title_data_plate_id": 122,
+          "title_data_plate_name": "122-8bb65d811510d0e60b605476864239",
+          "title_data_val": "Let's Do This"
+        },
+        "home_name": "Japan"
+      }
+    ],
+    "search_params": {
+      "fighter_id": "canvas",
+      "page": "1"
+    },
+    "page": 1,
+    "common": {
+      "statusCode": 200,
+      "isError": false,
+      "loginUser": {
+        "platformId": 3,
+        "shortId": 3084788835,
+        "fighterId": "gr8stalin",
+        "flg": true,
+        "regionId": 2
+      },
+      "appEnv": "prd"
+    },
+    "__lang": "en",
+    "__namespaces": {
+      "common": {
+        "[t]title": "STREET FIGHTER 6",
+        "[t]header__nav__esports": "eSports",
+        "[t]header__nav__esports__cpt": "CAPCOM Pro Tour",
+        "[t]header__nav__esports__sfl": "STREET FIGHTER League",
+        "[t]header__nav__support": "Support",
+        "[t]header__nav__support__manual": "Online Manual",
+        "[t]header__nav__support__faq": "FAQ / Contact Us",
+        "[t]header__nav__login": "Log in / Sign up",
+        "[t]header__nav__profile": "Profile",
+        "[t]header__nav__settings": "Settings",
+        "[t]header__nav__setting__base": "Account Settings",
+        "[t]header__nav__setting__profile": "Profile Settings",
+        "[t]header__nav__point__history": "My Buckler Points",
+        "[t]header__nav__logout": "Log Out",
+        "[t]backler__nav__profile": "Profile",
+        "[t]backler__nav__cfn": "CFN",
+        "[t]backler__nav__info": "INFO",
+        "[t]backler__nav__more": "MORE",
+        "[t]backler__nav__other": "OTHER",
+        "[t]backler__nav__capcom_fighters_network": "Capcom Fighters Network",
+        "[t]backler__nav__fighterslist": "Players",
+        "[t]backler__nav__fightersclub": "Clubs",
+        "[t]backler__nav__ranking": "Rankings",
+        "[t]backler__nav__information": "ADMINISTRATIVE INFO",
+        "[t]backler__nav__event": "EVENT SCHEDULE",
+        "[t]backler__nav__reward": "REWARDS",
+        "[t]header__nav__official": "Official Site",
+        "[t]header__nav__official__game": "Game Info",
+        "[t]header__nav__official__game__mode": "Game Modes",
+        "[t]header__nav__official__game__mode__fg": "Fighting Ground",
+        "[t]header__nav__official__game__mode__bh": "Battle Hub",
+        "[t]header__nav__official__game__mode__wt": "World Tour",
+        "[t]header__nav__official__character": "Characters",
+        "[t]header__nav__official__news": "News",
+        "[t]header__nav__official__news__all": "All",
+        "[t]header__nav__official__news__game": "Games",
+        "[t]header__nav__official__news__esports": "eSports",
+        "[t]header__nav__official__news__goods": "Merchandise",
+        "[t]header__nav__official__news__event": "Events",
+        "[t]header__nav__official__news__campaign": "Campaigns",
+        "[t]header__nav__official__column": "Dev Column",
+        "[t]header__nav__official__product": "Product Info",
+        "[t]header__nav__official__product__main": "Main Game",
+        "[t]header__nav__official__product__season": "Season",
+        "[t]header__nav__official__product__dlc": "DLC",
+        "[t]header__nav__series": "Street Fighter Series",
+        "[t]sns__tw_account": "@StreetFighter",
+        "[t]sns__ig_account": "@streetfightergame",
+        "[t]sns__yt_account": "",
+        "[t]sns__fb_account": "",
+        "[t]quick__nav__headline": "BUCKLER HEADLINES",
+        "[t]quick__nav__character": "Character Info",
+        "[t]yes": "Yes",
+        "[t]no": "No",
+        "[t]skip": "Skip",
+        "[t]close": "Close",
+        "[t]change": "Change",
+        "[t]confirm": "Confirm",
+        "[t]back": "Back",
+        "[t]praise_30day_display": "Not shown for 30 days",
+        "[t]praise_point_history": "Buckler Points History",
+        "[t]praise_exit": "Do you want to leave the page?",
+        "[t]list_crossplay_active": "Crossplay: Enable",
+        "[t]list_crossplay_disactive": "Crossplay: Disable",
+        "[t]CHARACTER": "GAME SELECTED CHARACTER",
+        "[t]ABOUT USER": "ABOUT USER",
+        "[t]SNS": "COMMUNICATION",
+        "[t]PLAYING TIME": "PLAYING TIME",
+        "[t]シリーズ歴": "Series History",
+        "[t]no_data": "No data found.",
+        "[t]login": "Log in",
+        "[t]more": "More",
+        "[t]YYYY/MM/DD HHmm": "MM/DD/YYYY HH:mm",
+        "[t]YYYY/MM/DD": "MM/DD/YYYY",
+        "[t]lang-all": "All",
+        "[t]lang-ja-jp": "日本語",
+        "[t]lang-en-us": "English",
+        "[t]lang-fr": "Français",
+        "[t]lang-it": "Italiano",
+        "[t]lang-de": "Deutsch",
+        "[t]lang-es-es": "Español",
+        "[t]lang-es-us": "LatinAmericanSpanish",
+        "[t]lang-ru": "Русский",
+        "[t]lang-pl": "Polski",
+        "[t]lang-pt-br": "Português do Brasil",
+        "[t]lang-zh-hant": "繁體中文",
+        "[t]lang-zh-hans": "简体中文",
+        "[t]lang-ko-kr": "한국어",
+        "[t]lang-ar": "Arabic",
+        "[t]browser_timezone": "Revert to browser time zone",
+        "[t]not_registered_register": "To use this service, you must log in or sign up.",
+        "[t]not_registered_to_wellcome": "Register here",
+        "[t]FAVORITE CHARACTER": "Favorite characters",
+        "[t]praise_title_battle_hub": "Get a PP with a Battle Hub!",
+        "[t]praise_title_fighting_ground": "Get PP in the Fighting Ground!",
+        "[t]praise_title_world_tour": "Get PP on the World Tour!",
+        "[t]praise_title_world_together": "Other achieved!",
+        "[t]praise_title_view": "I browsed the BBC!",
+        "[t]praise_title_tweet": "Tweet the members card!",
+        "[t]praise_title_departure": "Monster traveled in Pokest!",
+        "[t]praise_title_everyday": "Accessed BBC!",
+        "[t]footer_support_manual": "Online Manual",
+        "[t]footer_support_faq": "FAQ / Contact Us",
+        "[t]footer_support_terms": "Terms of Service",
+        "[t]ingame__footer": "Buckler&apos;s Boot Camp",
+        "[t]league_point_unit": "<PLUNUM> LP",
+        "[t]club_points_unit": "<PLUNUM> P",
+        "[t]praise_point_unit": "<PLUNUM> PT",
+        "[t]master_rating_unit": "<PLUNUM> MR",
+        "[t]battle_win": "WINS",
+        "[t]battle_lose": "LOSES",
+        "[t]battle_draw": "DRAW",
+        "[t]search_character_select": "Select Character",
+        "[t]search_home_area": "Region",
+        "[t]<PLUNUM>st": "<PLUNUM>st",
+        "[t]<PLUNUM>nd": "<PLUNUM>nd",
+        "[t]<PLUNUM>rd": "<PLUNUM>rd",
+        "[t]<PLUNUM>th": "<PLUNUM>th",
+        "[t]USER CODE": "User Code",
+        "[t]act": "Phase<PLUNUM>",
+        "[t]act_tit": "Phase",
+        "[t]second_unit": "<PLUNUM> second",
+        "[t]seconds_unit": "<PLUNUM> seconds",
+        "[t]count_unit": "<PLUNUM> time",
+        "[t]counts_unit": "<PLUNUM> times",
+        "[t]kudos_point_unit": "<PLUNUM> PT",
+        "[t]backler__nav__stats": "STATS",
+        "[t]backler__nav__dia": "Battle Diagrams",
+        "[t]backler__nav__usagerate": "Character Usage",
+        "[t]coming_soon": "Coming Soon",
+        "[t]YYYY/MM": "MM/YYYY",
+        "[t]modern": "Modern",
+        "[t]classic": "Classic",
+        "[t]battle_change_list": "Battle Change List",
+        "[t]updated_date": "Updated <MM>/<DD>/<YYYY>"
+      },
+      "terms": {
+        "[t]terms_read": "Buckler's Boot Camp Terms of Use (hereinafter referred to as 'the Terms') shall specify the terms and conditions for the use of Buckler's Boot Camp service (hereinafter referred to as 'the Service') as provided by Capcom Co., Ltd., (hereinafter referred to as 'the Company') on its website as part of the Company’s Street Fighter 6 game service.",
+        "[t]terms_title1": "Article 1 (Relevant Terms of Use)",
+        "[t]terms_text1-1": "1. The Service may only be used by players who play the game software Street Fighter 6.",
+        "[t]terms_text1-2": "2. Users of the Service (hereinafter referred to as 'Players') shall comply with the End User License Agreement and the Terms of Service for Street Fighter 6 and the CAPCOM ID Terms of Use (hereinafter collectively referred to as the “Relevant Terms”), as well as the Terms. In the event of any discrepancy or inconsistency between the provisions of the Terms and  the Relevant Terms, then the former shall prevail.",
+        "[t]terms_title2": "Article 2 (Changes to the Terms)",
+        "[t]terms_text2-1": "1. The Company may change all or any part of the Terms as necessary.",
+        "[t]terms_text2-2": "2. Changes to the Terms shall become effective when fourteen (14) days or otherwise separately determined by the Company have passed from the date when the Company notified the Players of the changed Terms via e-mail or when the Company posted the changed Terms on the website related to the Service or individual services.",
+        "[t]terms_title3": "Article 3 (Changes to the Service)",
+        "[t]terms_text3-1": "1. The specific details of each provision of the Service shall be in accordance with the guidance on each content page provided by the Company.",
+        "[t]terms_text3-2": "2. The Company may change or discontinue any part of the Service without notice in accordance with the Company's operating policy.",
+        "[t]terms_title4": "Article 4 (Prohibited Acts)",
+        "[t]terms_text4-1": "If Players engage in any of the prohibited acts stipulated in the Relevant Terms while using the Service, the Company may impose sanctions on such players, including suspension of the use of the Service, in accordance with the provisions of each of the Relevant Terms.",
+        "[t]terms_title5": "Article 5 (Communication with Other Players)",
+        "[t]terms_text5-1": "Players shall recognize that the Service includes content that involves communication with other players, shall pay due attention to the content transmitted through the Service, and shall acknowledge in advance that Players may be subject to the sanctions set forth in the preceding article for inappropriate use of such content.",
+        "[t]terms_title6": "Article 6 (Termination of the Service)",
+        "[t]terms_text6-1": "The Company may terminate the Service by notifying Players thereof via e-mail or by posting an announcement in the Service at least thirty (30) days prior to the date of termination.",
+        "[t]terms_title7": "Article 7 (Handling of Personal Information)",
+        "[t]terms_text7-1": "Matters concerning the handling of personal information by the Company in connection with the use of the Service by Players shall be as set forth in the CAPCOM ID Privacy Policy.",
+        "[t]terms_title8": "Article 8 (Miscellaneous Provisions)",
+        "[t]terms_text8-1": "The English version shall be the official version of the Terms. All non-English translated versions are for reference only, and in the event of any discrepancies between the translated version and the English version, the English version shall prevail.",
+        "[t]terms_date": "June 2, 2023"
+      },
+      "error": {
+        "[t]title": "Error | Buckler's Boot Camp | STREET FIGHTER 6 | CAPCOM",
+        "[t]description": "",
+        "[t]error_expired_text": "Some time has passed since you last logged in.<br />Authentication is required before you can continue.<br />Please log in again below.",
+        "[t]error_noplaydata_title": "No STREET FIGHTER 6 play data found.",
+        "[t]error_noplaydata_text": "To join Buckler's Boot Camp and use content linked to play data, you must have STREET FIGHTER 6 play data.<br /><br />If you have played STREET FIGHTER 6, please verify the following:<br />- You have played online<br />- You have linked a logged in CAPCOM ID to a platform account used to play STREET FIGHTER 6<br /><br />For users who have played STREET FIGHTER 6 offline or have not played at all, we have prepared content that you can enjoy even if you don't register.<br /><br />If you have questions about registration, please refer to the following link:<br />",
+        "[t]error_system_text": "An unexpected error has occurred.<br />We apologize for any inconvenience.<br />Please wait a short while and start again from the beginning.",
+        "[t]login_relogin_error_text": "You are trying to log in with a different account. Please log out and try again.",
+        "[t]error_link_faq": "Go to FAQ",
+        "[t]error_link_top": "Go to Top Page",
+        "[t]error_login": "Log in/Sign up",
+        "[t]login_logout_btn": "Log Out",
+        "[t]403_title": "The page you were trying to access could not be displayed.",
+        "[t]403_text": "Please try again after confirming that you have logged in and registered to Buckler's Boot Camp.",
+        "[t]404_title": "Page cannot be found.",
+        "[t]404_text": "The page you are looking for may be temporarily inaccessible, it may have been moved or deleted, or the URL may be incorrect.<br />Please click on the following button and return to the top page. We apologize for any inconvenience.",
+        "[t]500_title": "An unexpected error has occurred.",
+        "[t]500_text": "Please refresh the page and try once more, or access it again in a short while.<br />We sincerely apologize for any inconvenience.",
+        "[t]maintenance_title_top": "Maintenance",
+        "[t]maintenance_title": "System maintenance is currently underway.",
+        "[t]maintenance_text": "Thank you for using Buckler's Boot Camp.<br />We are now carrying out maintenance.<br />We sincerely apologize for any inconvenience.<br />Please wait until maintenance is completed.",
+        "[t]maintenance_link": "Maintenance Details",
+        "[t]links_sf6": "Street Fighter 6",
+        "[t]links_bbc": "Buckler&apos;s Boot Camp",
+        "[t]links_series": "Street Fighter series"
+      },
+      "fighter": {
+        "[t]title": "Players | Buckler's Boot Camp | STREET FIGHTER 6 | CAPCOM",
+        "[t]description": "On this page, you can check the following information that is primarily shown in-game via the following path: [CFN] > [Players].",
+        "[t]fighter__nav__friend": "Friends",
+        "[t]fighter__nav__follow": "Followed Players",
+        "[t]fighter__nav__search": "Search",
+        "[t]fighter__nav__request": "Requests",
+        "[t]fighter__nav__live": "Spotlight",
+        "[t]fighter__nav__block": "Blocked",
+        "[t]fighter__nav__application": "Sent",
+        "[t]fighter__nav__receivedrequest": "Received",
+        "[t]fighter__nav__winning": "Winning Streaks",
+        "[t]fighter__nav__mvp": "Today's MVPs",
+        "[t]search_easy": "Basic",
+        "[t]search_detail": "Detailed",
+        "[t]search_id": "Keyword Search",
+        "[t]search_back": "Return the conditions",
+        "[t]search_playername": "Search by player name",
+        "[t]search_4word": "You must enter at least 4 characters to search by player name.",
+        "[t]search_usercode": "Search by user code",
+        "[t]search_9word": "You must enter 9 or more characters to search by user code.",
+        "[t]search_homecategory": "Region",
+        "[t]search_homeId": "Specific Region",
+        "[t]search_last_play": "Last Played",
+        "[t]search_league_max": "League point upper limit",
+        "[t]search_league_min": "League point lower limit",
+        "[t]search_character": "Selected Character",
+        "[t]search_comment_tag": "Comment",
+        "[t]search_playtimezone": "Active Hours",
+        "[t]search_crossplay": "Crossplay",
+        "[t]search_ability": "Skill Level",
+        "[t]fighter_sort": "Sort",
+        "[t]fighter_sort_gamemode": "Game Mode",
+        "[t]fighter_sort_date_application": "Date Applied",
+        "[t]fighter_sort_date_register": "Date Added",
+        "[t]fighter_sort_lastplay": "Last Played",
+        "[t]fighter_sort_league": "League",
+        "[t]fighter_sort_winning": "Win Streak",
+        "[t]fighter_timezone": "Active Hours",
+        "[t]fighter_winning_0": "<span><PLUNUM></span>-Win Streak",
+        "[t]fighter_winning_1": "<span><PLUNUM></span>-Win Streak",
+        "[t]fighter_not_friend": "You have no registered friends.",
+        "[t]fighter_not_follow": "You are not following anyone.",
+        "[t]fighter_not_conditions": "No such players found.",
+        "[t]fighter_not_request": "You have no pending requests.",
+        "[t]fighter_not_user": "No matching users found.",
+        "[t]fighter_not_block": "You have not blocked anyone.",
+        "[t]fighter_error": "An illegal value has been entered",
+        "[t]fighter_area": "Regions",
+        "[t]not_registered_lead": "On this page, you can check the following information that is primarily shown in-game via the following path: [CFN] > [Players].",
+        "[t]not_registered_ex1": "- View friends' in-game player information.",
+        "[t]not_registered_ex2": "- View info for players you are following.",
+        "[t]not_registered_ex3": "- Select filters to search for players.",
+        "[t]not_registered_ex4": "- See sent and received friend requests."
+      }
+    }
+  },
+  "__N_SSP": true
+}
