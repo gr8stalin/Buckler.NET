@@ -23,7 +23,7 @@ namespace Buckler.NET.Tests
             var parsedData = JsonDocument.Parse(masterProfile).RootElement.GetProperty("pageProps");
 
             // Act
-            var jsonObj = JsonSerializer.Deserialize<FighterBanner>(parsedData);
+            var jsonObj = JsonSerializer.Deserialize<PlayerGameplayStats>(parsedData);
 
             // Assert
             jsonObj.ShouldNotBeNull();
@@ -40,7 +40,7 @@ namespace Buckler.NET.Tests
             var parsedData = JsonDocument.Parse(highMasterProfile).RootElement.GetProperty("pageProps");
 
             // Act
-            var jsonObj = JsonSerializer.Deserialize<FighterBanner>(parsedData)!;
+            var jsonObj = JsonSerializer.Deserialize<PlayerGameplayStats>(parsedData)!;
             var highMasterCharacter = jsonObj.Stats.CharacterPlacements.Where(c => c.CharacterId == 26).Single();
 
             // Assert

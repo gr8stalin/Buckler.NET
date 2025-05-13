@@ -14,12 +14,12 @@ namespace Buckler.NET
             return $"{ApiUrlPath}/{authToken}/en/fighterslist/search/result.json?fighter_id={playerName}";
         }
 
-        public string ProfileSearchUrl(long? playerUserCode)
+        public string ProfileSearchUrl(long playerUserCode)
         {
             return $"{ApiUrlPath}/{authToken}/en/fighterslist/search/result.json?short_id={playerUserCode}";
         }
 
-        public string ReplayListUrl(long? playerUserCode, GameType replayType)
+        public string ReplayListUrl(long playerUserCode, GameType replayType)
         {
             var replayListUrl = $"{ApiUrlPath}/{authToken}/en/profile/{playerUserCode}/battlelog";
 
@@ -44,7 +44,7 @@ namespace Buckler.NET
             return replayListUrl;
         }
 
-        public string PlayerStatsUrl(long? playerUserCode)
+        public string PlayerStatsUrl(long playerUserCode)
         {
             return $"{ApiUrlPath}/{authToken}/en/profile/{playerUserCode}/play.json";
         }

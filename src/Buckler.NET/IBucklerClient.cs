@@ -6,8 +6,10 @@ namespace Buckler.NET
     {
         Task<IEnumerable<PlayerProfile>> GetPlayerAsync(string playerName);
 
-        Task<PlayerProfile?> GetPlayerAsync(long? playerUserCode);
+        Task<PlayerProfile?> GetPlayerAsync(long playerUserCode);
 
-        Task<IEnumerable<Replay>> GetAllReplaysForGametypeAsync(long? playerUserCode, GameType replayType);
+        Task<IEnumerable<Replay>> GetAllReplaysForGametypeAsync(long playerUserCode, GameType replayType);
+
+        Task<PlayerGameplayStats> GetPlayerStatsAsync(long playerUserCode);
     }
 }

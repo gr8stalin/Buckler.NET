@@ -1,4 +1,5 @@
-﻿using Buckler.NET.Models;
+﻿using Buckler.NET.Extensions;
+using Buckler.NET.Models;
 using System.Net;
 using System.Text.Json;
 
@@ -59,13 +60,8 @@ namespace Buckler.NET
         /// </param>
         /// <returns>A <see cref="PlayerProfile"/> object representing their relevant CFN information.</returns>
         /// <exception cref="ArgumentException"></exception>
-        public async Task<PlayerProfile?> GetPlayerAsync(long? playerUserCode)
+        public async Task<PlayerProfile?> GetPlayerAsync(long playerUserCode)
         {
-            if (playerUserCode is null)
-            {
-                throw new ArgumentException("A search term must be provided", nameof(playerUserCode));
-            }
-
             var playerUserCodeSearchUrl = urlPathGenerator.ProfileSearchUrl(playerUserCode);
             var playerSearchResponse = await GetBucklerDataAsync(playerUserCodeSearchUrl);
 
@@ -81,19 +77,36 @@ namespace Buckler.NET
         }
 
         /// <summary>
+        /// Given a player's user code, retrieves their gameplay statistics and other
+        /// metadata like win rates, character usage, etc.
+        /// </summary>
+        /// <param name="playerUserCode">This must be the player's exact user code</param>
+        /// <returns>A <see cref="PlayerGameplayStats"/> object representing the stats
+        /// from their CFN profile.</returns>
+        public async Task<PlayerGameplayStats?> GetPlayerStatsAsync(long playerUserCode)
+        {
+            var playerUserCodeStatsUrl = urlPathGenerator.PlayerStatsUrl(playerUserCode);
+            var playerStatsResponse = await GetBucklerDataAsync(playerUserCodeStatsUrl);
+
+            var playerStats = JsonSerializer.Deserialize<PlayerGameplayStats>(playerStatsResponse)!;
+
+            if (playerStats.HasNoPlaytime())
+            {
+                return null;
+            }
+
+            return playerStats;
+        }
+
+        /// <summary>
         /// Retrieves the most recent replay from the specified user's CFN
         /// </summary>
         /// <param name="playerUserCode"></param>
         /// <param name="gameType"></param>
         /// <returns>The most recent replay as a <see cref="Replay"/></returns>
         /// <exception cref="ArgumentException"></exception>
-        public async Task<Replay?> GetMostRecentReplayAsync(long? playerUserCode, GameType gameType)
+        public async Task<Replay?> GetMostRecentReplayAsync(long playerUserCode, GameType gameType)
         {
-            if (playerUserCode is null)
-            {
-                throw new ArgumentException("Player identification must be provided", nameof(playerUserCode));
-            }
-
             var replayListUrl = urlPathGenerator.ReplayListUrl(playerUserCode, gameType);
             var replayJsonData = await GetBucklerDataAsync(replayListUrl);
             var replayData = JsonSerializer.Deserialize<ReplayContainer>(replayJsonData)!;
@@ -113,13 +126,8 @@ namespace Buckler.NET
         /// <param name="gameType"></param>
         /// <returns>A collection of all available replays</returns>
         /// <exception cref="ArgumentException"></exception>
-        public async Task<IEnumerable<Replay>> GetAllReplaysForGametypeAsync(long? playerUserCode, GameType gameType)
+        public async Task<IEnumerable<Replay>> GetAllReplaysForGametypeAsync(long playerUserCode, GameType gameType)
         {
-            if (playerUserCode is null)
-            {
-                throw new ArgumentException("Player identification must be provided", nameof(playerUserCode));
-            }
-
             // Buckler's pagination starts at 1 instead of 0
             int pageOffset = 2;
             bool replaysPresent = true;

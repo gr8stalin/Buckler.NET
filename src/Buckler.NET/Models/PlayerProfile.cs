@@ -27,7 +27,7 @@ namespace Buckler.NET.Models
 
     }
 
-    public class FighterBanner
+    public class PlayerGameplayStats
     {
         [JsonPropertyName("fighter_banner_info")]
         public PlayerProfile Info { get; set; }
