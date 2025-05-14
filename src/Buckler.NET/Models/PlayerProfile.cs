@@ -42,7 +42,7 @@ namespace Buckler.NET.Models
         public string PlayerName { get; set; }
 
         [JsonPropertyName("short_id")]
-        public long PlayerUserCode { get; set; }
+        public long UserCode { get; set; }
 
         [JsonPropertyName("platform_name")]
         public string Platform { get; set; }

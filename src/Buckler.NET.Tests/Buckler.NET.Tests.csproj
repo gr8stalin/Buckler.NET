@@ -32,22 +32,25 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="TestData\ConverterData\grand-master-player-profile-5-12-2025.json">
+    <None Update="TestData\PlayerStatsData\grand-master-player-profile-5-12-2025.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="TestData\ConverterData\high-master-player-profile-5-12-2025.json">
+    <None Update="TestData\PlayerStatsData\high-master-player-profile-5-12-2025.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="TestData\ConverterData\legend-player-profile-5-12-2025.json">
+    <None Update="TestData\PlayerStatsData\legend-player-profile-5-12-2025.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="TestData\ConverterData\old-self-profile.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="TestData\ConverterData\self-profile-5-12-2025.json">
+    <None Update="TestData\PlayerStatsData\low-rank-player-5-13-2025.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="TestData\ConverterData\ultimate-master-player-profile-5-12-2025.json">
+    <None Update="TestData\PlayerStatsData\ultimate-master-player-profile-5-12-2025.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TestData\PlayerStatsData\self-profile-5-12-2025.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

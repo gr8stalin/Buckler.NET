@@ -23,19 +23,6 @@ namespace Buckler.NET.Tests
         }
 
         [Test]
-        public void GetPlayer_Throws_If_No_User_Code_Provided()
-        {
-            // Arrange
-            var subject = Substitute.For<IBucklerClient>();
-            long? nullUserCode = null;
-            subject.GetPlayerAsync(nullUserCode).ThrowsAsync(new ArgumentException());
-
-            // Act
-            // Assert
-            subject.GetPlayerAsync(nullUserCode).ThrowsAsync(new ArgumentException());
-        }
-
-        [Test]
         public async Task GetPlayer_Returns_Profiles_On_Success()
         {
             // Arrange
@@ -86,7 +73,7 @@ namespace Buckler.NET.Tests
             return new PersonalInfo()
             {
                 PlayerName = playerName ?? "Test Player",
-                PlayerUserCode = userCode ?? 44445555,
+                UserCode = userCode ?? 44445555,
                 Platform = platform ?? "Test Platform"
             };
         }
