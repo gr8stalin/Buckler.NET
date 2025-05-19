@@ -1,5 +1,6 @@
 ﻿using Buckler.NET.Extensions;
 using Buckler.NET.Models;
+using Buckler.NET.Models.BucklerPostRequests;
 using System.Net;
 using System.Text.Json;
 
@@ -11,6 +12,10 @@ namespace Buckler.NET
         private readonly string bucklerRId = bucklerRId;
         private HttpClient client = CreateHttpClient();
         private UrlPathGenerator urlPathGenerator = new(authToken);
+        private readonly JsonSerializerOptions camelCaseOption = new JsonSerializerOptions()
+        {
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+        };
 
         /// <summary>
         /// Given a player's name, returns a collection of profiles that contain that name.
@@ -174,6 +179,24 @@ namespace Buckler.NET
             return replays;
         }
 
+        public async Task<IEnumerable<CharacterRankInfo>> GetCharacterRankByPhaseAsync(long playerUserCode, int phase)
+        {
+            var characterRankUrl = urlPathGenerator.PlayerRankInfo();
+            var postBodyObj = new PointsAndRankPostRequest()
+            {
+                TargetShortId = playerUserCode,
+                TargetSeasonId = phase,
+                Locale = "en",
+                Peak = false
+            };
+
+            var postBodyString = JsonSerializer.Serialize(postBodyObj, camelCaseOption);
+
+            var characterRankResponse = await PostBucklerDataAsync(characterRankUrl, postBodyString);
+
+            return JsonSerializer.Deserialize<IEnumerable<CharacterRankInfo>>(characterRankResponse.RootElement.GetProperty("response").GetProperty("character_league_infos"))!;
+        }
+
         /// <summary>
         /// Wrapper for <see cref="HttpClient.SendAsync(HttpRequestMessage)"/> with
         /// some exception handling and Buckler-specific parsing to access the actual
@@ -184,7 +207,7 @@ namespace Buckler.NET
         /// <exception cref="WebException"></exception>
         private async Task<JsonElement> GetBucklerDataAsync(string requestUrl)
         {
-            var request = CreateRequest(requestUrl);
+            var request = CreateRequest(HttpMethod.Get, requestUrl);
             var response = await client.SendAsync(request);
 
             if (!response.IsSuccessStatusCode)
@@ -206,18 +229,47 @@ namespace Buckler.NET
             return JsonDocument.Parse(responseString).RootElement.GetProperty("pageProps");
         }
 
+        private async Task<JsonDocument> PostBucklerDataAsync(string requestUrl, string postBody)
+        {
+            var request = CreateRequest(HttpMethod.Post, requestUrl, postBody);
+            var response = await client.SendAsync(request);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                switch (response.StatusCode)
+                {
+                    case HttpStatusCode.BadRequest:
+                        throw new WebException("The server returned 400: Bad Request");
+                    case HttpStatusCode.Unauthorized:
+                        throw new WebException("The server returned 401: Unauthorized");
+                    case HttpStatusCode.Forbidden:
+                        throw new WebException("The server returned 403: Forbidden");
+                    case HttpStatusCode.NotFound:
+                        throw new WebException("The server returned 404: Not Found");
+                }
+            }
+
+            var responseString = await response.Content.ReadAsStringAsync();
+            return JsonDocument.Parse(responseString);
+        }
+
         /// <summary>
         /// Creates the Buckler-specific <see cref="HttpRequestMessage"/> for
         /// accessing the various Buckler endpoints
         /// </summary>
         /// <param name="searchUrl">The endpoint URL on Buckler</param>
-        private HttpRequestMessage CreateRequest(string searchUrl)
+        private HttpRequestMessage CreateRequest(HttpMethod requestType, string searchUrl, string? body = null)
         {
-            var request = new HttpRequestMessage(HttpMethod.Get, searchUrl);
+            var request = new HttpRequestMessage(requestType, searchUrl);
             request.Headers.Add("Cookie", $"buckler_r_id={bucklerRId}; buckler_id={bucklerId}");
             request.Headers.Add("Accept-Encoding", "gzip, deflate, br, zstd");
             request.Headers.Add("Accept-Language", "en-US,en;q=0.9,ja;q=0.8");
             request.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0");
+
+            if (!string.IsNullOrEmpty(body))
+            {
+                request.Content = new StringContent(body, System.Text.Encoding.UTF8, "application/json");
+            }
 
             return request;
         }

@@ -48,5 +48,7 @@ namespace Buckler.NET
         {
             return $"{ApiUrlPath}/{authToken}/en/profile/{playerUserCode}/play.json";
         }
+
+        public string PlayerRankInfo() => "https://www.streetfighter.com/6/buckler/api/profile/play/act/leagueinfo";
     }
 }
